@@ -2,7 +2,7 @@
 
 A modern, responsive, and accessible personal portfolio website built with **React 19**, **Vite**, **Tailwind CSS v4**, **Framer Motion**, and **Lenis** smooth scrolling.
 
-Designed to showcase professional experience in **Java backend engineering** (Spring Boot, REST APIs, Spring Security, Redis, MySQL) and **React frontend integration**.
+Designed to showcase professional experience as a **Java Full Stack Developer**, specializing in core **backend engineering** (Spring Boot, REST APIs, Spring Security, Redis, MySQL) and building web applications with **React**.
 
 ---
 
@@ -112,7 +112,7 @@ In the project directory, you can run:
 
 - **Name**: Ashif Akram
 - **Role**: Java Full Stack Developer / Junior Software Engineer
-- **Company**: ESQUARE SOFTWARE INDIA PVT LTD
+- **Company**: Esquare(E2) Software India Pvt Ltd.
 - **Location**: Bengaluru, KA, India
 - **GitHub**: [@ashifakram](https://github.com/ashifakram)
 - **LinkedIn**: [Ashif Akram](https://www.linkedin.com/in/ashif-akram-893996227)
