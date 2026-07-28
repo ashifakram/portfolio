@@ -1,0 +1,126 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #09090b;
+  --color-surface: #fdf7ff;
+  --color-primary: #4f378a;
+  --color-primary-container: #6750a4;
+  --color-primary-fixed: #e9ddff;
+  --color-primary-fixed-dim: #cfbcff;
+  --color-on-primary: #ffffff;
+  --color-on-primary-container: #e0d2ff;
+  --color-on-background: #1d1b20;
+  --color-on-surface-variant: #9ca3af;
+  --color-outline-variant: #cbc4d2;
+  --color-secondary: #63597c;
+  --color-secondary-fixed-variant: #4b4263;
+  --color-surface-container-high: #ece6ee;
+
+  --font-display-2xl: 'Hanken Grotesk', sans-serif;
+  --font-headline-md: 'Hanken Grotesk', sans-serif;
+  --font-display-lg: 'Hanken Grotesk', sans-serif;
+  --font-body-lg: 'Inter', sans-serif;
+  --font-body-md: 'Inter', sans-serif;
+  --font-code: 'Geist Mono', monospace;
+  --font-label-sm: 'Geist Mono', monospace;
+}
+
+@layer base {
+  body {
+    background-color: #09090b;
+    color: #f3f4f6;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/* Glass card styling matching Stitch design exactly */
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+  border-color: rgba(207, 188, 255, 0.4);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+/* Scroll progress bar */
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(to right, #6750a4, #cfbcff);
+  z-index: 100;
+  width: 0%;
+  transition: width 0.1s ease-out;
+}
+
+/* Moving border animation matching Stitch design */
+.moving-border {
+  position: relative;
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+
+.moving-border::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    transparent,
+    rgba(207, 188, 255, 0.4),
+    rgba(231, 195, 101, 0.4),
+    transparent 30%
+  );
+  animation: rotate 6s linear infinite;
+  z-index: 0;
+}
+
+.moving-border::after {
+  content: '';
+  position: absolute;
+  inset: 2px;
+  background: #09090b;
+  border-radius: calc(1.5rem - 2px);
+  z-index: 0;
+}
+
+.moving-border-content {
+  position: relative;
+  z-index: 10;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.timeline-line {
+  background: linear-gradient(to bottom, #6750a4 0%, #c9a74d 100%);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #09090b;
+}
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
+}
+
