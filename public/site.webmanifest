@@ -8,7 +8,7 @@
       "type": "image/svg+xml"
     }
   ],
-  "start_url": "/",
+  "start_url": "/portfolio/",
   "display": "standalone",
   "background_color": "#09090b",
   "theme_color": "#6750a4"
