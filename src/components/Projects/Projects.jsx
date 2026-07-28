@@ -1,12 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { FaGithub } from 'react-icons/fa6';
 import { flagshipProject, enterpriseProjects } from '../../data/projects';
 
 const sahayakFlow = [
   { icon: 'person', title: 'Teacher', sub: 'End User' },
   { icon: 'laptop_mac', title: 'React SPA', sub: 'Frontend Layer' },
   { icon: 'settings_ethernet', title: 'Node & Express', sub: 'RESTful API', active: true },
-  { icon: 'neurology', title: 'Gemini AI', sub: 'ML Engine' }
+  { icon: 'local_fire_department', title: 'Firebase', sub: 'OAuth 2.0 & Firestore' },
+  { icon: 'neurology', title: 'Gemini API', sub: 'GCP AI Engine' }
 ];
 
 const Projects = () => {
@@ -24,7 +26,7 @@ const Projects = () => {
           <span className="font-['Geist_Mono'] text-xs uppercase tracking-widest text-[#cfbcff] mb-4 block font-medium">
             {flagshipProject.tag}
           </span>
-          <h2 className="font-['Hanken_Grotesk'] text-4xl sm:text-6xl font-extrabold text-white mb-6">
+          <h2 className="font-['Hanken_Grotesk'] text-4xl sm:text-6xl font-extrabold google-text-motion mb-6">
             {flagshipProject.title}
           </h2>
           <p className="font-['Inter'] text-base sm:text-lg text-gray-300 max-w-2xl leading-relaxed">
@@ -39,6 +41,10 @@ const Projects = () => {
               src={flagshipProject.image}
               alt="Sahayak AI Platform"
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              loading="lazy"
+              decoding="async"
+              width="800"
+              height="450"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#09090b]/80 via-transparent to-transparent" />
           </div>
@@ -92,7 +98,7 @@ const Projects = () => {
         {/* Full-Stack Architecture Section */}
         <div className="mb-20">
           <h3 className="font-['Hanken_Grotesk'] text-2xl sm:text-3xl font-bold text-center mb-12 text-white">
-            Full-Stack Architecture (MERN)
+            Full-Stack Architecture (Node.js, React, Firebase & GCP)
           </h3>
           <div className="relative flex flex-col md:flex-row items-center justify-between gap-6 p-8 glass-card rounded-3xl border border-white/10 overflow-hidden">
             <div className="absolute inset-0 opacity-10 bg-gradient-to-r from-[#6750a4] to-transparent pointer-events-none" />
@@ -157,18 +163,20 @@ const Projects = () => {
               href={flagshipProject.liveUrl}
               target="_blank"
               rel="noopener noreferrer"
+              aria-label={`View live demo of ${flagshipProject.title}`}
               className="px-8 py-3.5 bg-[#6750a4] hover:bg-[#4f378a] text-white rounded-full font-['Hanken_Grotesk'] font-bold flex items-center justify-center gap-2 transition-all shadow-lg shadow-[#6750a4]/30"
             >
-              <span className="material-symbols-outlined text-xl">rocket_launch</span> Live Demo
+              <span className="material-symbols-outlined text-xl" aria-hidden="true">rocket_launch</span> Live Demo
             </a>
           )}
           <a
             href={flagshipProject.githubUrl}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label={`View ${flagshipProject.title} source code on GitHub`}
             className="px-8 py-3.5 bg-[#6750a4] hover:bg-[#4f378a] text-white rounded-full font-['Hanken_Grotesk'] font-bold flex items-center justify-center gap-2 transition-all shadow-lg shadow-[#6750a4]/30"
           >
-            <span className="material-symbols-outlined text-xl">code</span> View on GitHub
+            <span className="material-symbols-outlined text-xl" aria-hidden="true">code</span> View on GitHub
           </a>
         </div>
       </motion.section>
@@ -184,8 +192,8 @@ const Projects = () => {
           <h2 className="font-['Hanken_Grotesk'] text-3xl sm:text-5xl font-bold text-white mb-4">
             Enterprise Applications
           </h2>
-          <p className="font-['Inter'] text-base text-gray-400 max-w-xl">
-            Robust, production-ready systems built with scalability and user experience in mind.
+          <p className="font-['Inter'] text-base text-gray-300 max-w-xl">
+            Robust applications built with clean architecture, reliability, and user experience in mind.
           </p>
         </div>
 
@@ -201,6 +209,10 @@ const Projects = () => {
                     src={proj.image}
                     alt={proj.title}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    loading="lazy"
+                    decoding="async"
+                    width="400"
+                    height="250"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#09090b]/80 to-transparent" />
                   <div className="absolute bottom-4 left-4">
@@ -213,7 +225,7 @@ const Projects = () => {
                 <h3 className="font-['Hanken_Grotesk'] text-xl font-bold text-white mb-3">
                   {proj.title}
                 </h3>
-                <p className="font-['Inter'] text-sm text-gray-400 mb-6 leading-relaxed">
+                <p className="font-['Inter'] text-sm text-gray-300 mb-6 leading-relaxed">
                   {proj.description}
                 </p>
               </div>
@@ -225,7 +237,7 @@ const Projects = () => {
                       key={i}
                       className="w-8 h-8 rounded-full bg-[#16171d] flex items-center justify-center border-2 border-[#09090b] text-gray-300"
                     >
-                      <span className="material-symbols-outlined text-xs">{ic}</span>
+                      <span className="material-symbols-outlined text-xs" aria-hidden="true">{ic}</span>
                     </div>
                   ))}
                 </div>
@@ -233,6 +245,7 @@ const Projects = () => {
                   href={proj.githubUrl}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label={`View ${proj.title} repository on GitHub`}
                   className="material-symbols-outlined text-[#cfbcff] group-hover:translate-x-2 transition-transform text-2xl"
                 >
                   arrow_forward
@@ -268,7 +281,7 @@ const Projects = () => {
               rel="noopener noreferrer"
               className="w-full sm:w-auto px-10 py-3.5 bg-[#6750a4] hover:bg-[#4f378a] text-white rounded-full font-['Hanken_Grotesk'] font-bold flex items-center justify-center gap-2 transition-all shadow-lg shadow-[#6750a4]/30"
             >
-              <span className="material-symbols-outlined text-xl">hub</span> GitHub
+              <FaGithub className="text-xl" /> GitHub
             </a>
             <a
               href="#contact"

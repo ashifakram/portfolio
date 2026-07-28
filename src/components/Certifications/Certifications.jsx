@@ -78,7 +78,7 @@ const Certifications = () => {
         transition={{ duration: 0.8 }}
       >
         <div className="flex items-center gap-4 mb-12">
-          <h2 className="font-['Hanken_Grotesk'] text-3xl sm:text-5xl font-bold text-white">
+          <h2 className="font-['Hanken_Grotesk'] text-3xl sm:text-5xl font-bold google-text-motion">
             Professional Certifications
           </h2>
           <div className="h-[2px] flex-1 bg-white/10" />
@@ -94,10 +94,10 @@ const Certifications = () => {
                   </span>
                 </div>
                 <h4 className="font-['Hanken_Grotesk'] text-lg font-bold text-white mb-2">{cert.title}</h4>
-                <p className="text-gray-400 font-['Inter'] text-sm mb-6">{cert.org}</p>
+                <p className="text-gray-300 font-['Inter'] text-sm mb-6">{cert.org}</p>
               </div>
               <div className="flex items-center gap-2 text-[#cfbcff] font-['Geist_Mono'] text-xs">
-                <span className="material-symbols-outlined text-sm">verified</span> {cert.badge}
+                <span className="material-symbols-outlined text-sm" aria-hidden="true">verified</span> {cert.badge}
               </div>
             </div>
           ))}

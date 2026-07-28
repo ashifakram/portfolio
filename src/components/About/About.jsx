@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 const techPills = [
   { name: 'Spring Boot', bg: 'bg-[#e1d4fd]/10', border: 'border-[#e1d4fd]/20', text: 'text-[#e9ddff]' },
   { name: 'Java 17+', bg: 'bg-[#6750a4]/10', border: 'border-[#6750a4]/20', text: 'text-[#e0d2ff]' },
-  { name: 'React.js', bg: 'bg-[#c9a74d]/10', border: 'border-[#c9a74d]/20', text: 'text-[#ffdf93]' },
+  { name: 'React', bg: 'bg-[#c9a74d]/10', border: 'border-[#c9a74d]/20', text: 'text-[#ffdf93]' },
   { name: 'Redis', bg: 'bg-[#e1d4fd]/10', border: 'border-[#e1d4fd]/20', text: 'text-[#e9ddff]' },
   { name: 'MySQL', bg: 'bg-[#6750a4]/10', border: 'border-[#6750a4]/20', text: 'text-[#e0d2ff]' },
   { name: 'JWT Auth', bg: 'bg-[#c9a74d]/10', border: 'border-[#c9a74d]/20', text: 'text-[#ffdf93]' },
@@ -32,12 +32,12 @@ const About = () => {
               Available for Full Stack Opportunities
             </div>
 
-            <h1 className="font-['Hanken_Grotesk'] text-4xl sm:text-6xl font-extrabold text-[#e9ddff] mb-6 leading-tight">
-              Bridging <span className="text-[#e7c365]">Backend</span> Power with Frontend <span className="text-[#cfbcff]">Finesse</span>.
-            </h1>
+            <h2 className="font-['Hanken_Grotesk'] text-4xl sm:text-6xl font-extrabold text-[#e9ddff] mb-6 leading-tight">
+              Bridging <span className="google-text-motion">Backend</span> Power with Frontend <span className="google-text-motion">Finesse</span>.
+            </h2>
 
             <p className="font-['Inter'] text-base sm:text-lg text-gray-300 max-w-2xl mb-10 leading-relaxed">
-              I am <span className="text-white font-semibold">Ashif Akram</span>, a Junior Software Engineer based in <span className="text-[#e7c365]">Bengaluru, India</span>. With over a year of professional experience at ESQUARE SOFTWARE, I specialize in crafting secure, high-performance Java ecosystems and seamless React integrations.
+              I am <span className="text-white font-semibold">Ashif Akram</span>, a Junior Software Engineer based in <span className="text-[#e7c365]">Bengaluru, India</span>. At Esquare(E2) Software India Pvt Ltd., I build secure Java backend services and modern React applications with a focus on maintainability and performance.
             </p>
 
             {/* Stats Bento Row */}
@@ -52,7 +52,7 @@ const About = () => {
               </div>
               <div className="glass-card p-6 rounded-2xl border border-white/10 col-span-2 sm:col-span-1">
                 <div className="flex items-center gap-2 mb-1">
-                  <span className="material-symbols-outlined text-[#e9ddff] text-xl">verified</span>
+                  <span className="material-symbols-outlined text-[#e9ddff] text-xl" aria-hidden="true">verified</span>
                   <span className="font-['Hanken_Grotesk'] text-2xl font-bold text-[#e9ddff]">Agile</span>
                 </div>
                 <span className="font-['Geist_Mono'] text-xs text-gray-400 uppercase tracking-widest">Workflow</span>
@@ -68,16 +68,21 @@ const About = () => {
                   className="w-full aspect-square object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100"
                   alt="Ashif Akram - Software Engineer"
                   src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1000&auto=format&fit=crop"
+                  loading="eager"
+                  decoding="async"
+                  fetchPriority="high"
+                  width="500"
+                  height="500"
                 />
               </div>
             </div>
 
             {/* Decorative Floating Badge */}
             <div className="absolute -top-4 -right-4 glass-card p-4 rounded-xl flex items-center gap-3 animate-bounce shadow-xl border border-white/10" style={{ animationDuration: '4s' }}>
-              <span className="material-symbols-outlined text-[#cfbcff] text-2xl">terminal</span>
+              <span className="material-symbols-outlined text-[#cfbcff] text-2xl" aria-hidden="true">terminal</span>
               <div className="flex flex-col">
                 <span className="text-[10px] uppercase font-bold text-gray-400 font-['Geist_Mono']">Stack</span>
-                <span className="text-xs font-bold text-white font-['Inter']">Java Expert</span>
+                <span className="text-xs font-bold text-white font-['Inter']">Java Developer</span>
               </div>
             </div>
           </div>
@@ -95,11 +100,11 @@ const About = () => {
       >
         <div className="glass-card p-6 sm:p-10 rounded-2xl border border-white/10">
           <h3 className="font-['Hanken_Grotesk'] text-2xl sm:text-3xl font-semibold mb-6 flex items-center gap-3 text-white">
-            <span className="material-symbols-outlined text-[#e9ddff] text-2xl">info</span>
+            <span className="material-symbols-outlined text-[#e9ddff] text-2xl" aria-hidden="true">info</span>
             Developer Profile
           </h3>
           <p className="font-['Inter'] text-base text-gray-300 mb-8 leading-relaxed max-w-4xl">
-            Dynamic Software Developer with 1.5+ years of experience in Java, Spring Boot, REST APIs, and backend development. I have a proven track record in building secure healthcare applications and scalable systems using Spring Security, JWT authentication, and Redis caching. My approach combines technical rigor with Agile methodologies to deliver production-ready code.
+            Java Full Stack Developer with 1.5+ years of experience building web applications. My daily responsibilities focus primarily on backend development using Java, Spring Boot, REST APIs, Spring Security, Redis, and MySQL, alongside building user interfaces with React. Backend engineering is my core interest, and I am actively expanding my knowledge into microservices architecture concepts.
           </p>
           <div className="flex flex-wrap gap-2.5">
             {techPills.map((pill, idx) => (

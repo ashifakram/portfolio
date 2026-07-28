@@ -5,25 +5,25 @@ const featureCards = [
   {
     icon: 'key',
     title: 'Auth & Security',
-    desc: 'Robust JWT implementation with Refresh Token rotation and Role-Based access control for healthcare privacy.'
+    desc: 'Robust JWT implementation with Role-Based Access Control (RBAC) to ensure application data privacy.'
   },
   {
     icon: 'bolt',
     title: 'Performance Opt.',
-    desc: 'Redis cache integration for frequently accessed doctor availability and patient record lookups.'
+    desc: 'Redis cache integration for frequently accessed endpoints and database lookups.'
   },
   {
     icon: 'auto_stories',
     title: 'API Documentation',
-    desc: 'Fully interactive Swagger/OpenAPI documentation for all 20+ endpoints enabling quick partner integration.'
+    desc: 'Interactive Swagger/OpenAPI documentation enabling clear and standardized backend API integration.'
   }
 ];
 
 const metricBadges = [
-  { val: '20+', label: 'REST APIs' },
+  { val: 'REST APIs', label: 'Backend Services' },
   { val: 'JWT', label: 'RBAC Secured' },
   { val: 'Redis', label: 'Caching Layer' },
-  { val: 'Cloud', label: 'Microservices' }
+  { val: 'Spring', label: 'Microservices' }
 ];
 
 const Achievements = () => {

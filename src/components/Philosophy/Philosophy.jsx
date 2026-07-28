@@ -23,7 +23,7 @@ const coreStrengths = [
   { title: 'Spring Boot', icon: 'bolt', span: 'col-span-1' },
   { title: 'Problem Solving', icon: 'psychology', span: 'lg:col-span-2' },
   { title: 'Database Design', icon: 'database', span: 'col-span-1' },
-  { title: 'React Integration', icon: 'layers', span: 'lg:col-span-2' },
+  { title: 'React', icon: 'layers', span: 'lg:col-span-2' },
   { title: 'Optimization', icon: 'speed', span: 'col-span-1' },
   { title: 'Clean Code', icon: 'code_blocks', span: 'col-span-1' },
 ];
@@ -61,11 +61,10 @@ const Philosophy = () => {
               format_quote
             </span>
             <h2 className="font-['Hanken_Grotesk'] text-3xl sm:text-5xl font-extrabold mb-8 leading-tight max-w-4xl mx-auto text-white">
-              "I enjoy building software that is{' '}
-              <span className="text-[#cfbcff]">secure, scalable, maintainable</span>, and user-focused."
+              "I enjoy building <span className="google-text-motion">secure, maintainable, and reliable</span> software with a strong focus on backend engineering."
             </h2>
             <p className="font-['Inter'] text-base sm:text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              My primary interest lies in Java backend engineering using Spring Boot, while also creating responsive frontend experiences with React. I believe clean architecture, thoughtful API design, and continuous learning are essential to delivering reliable enterprise applications.
+              My primary area of interest is Java backend engineering using Spring Boot, RESTful APIs, and relational databases, paired with building responsive React interfaces. I value clean architecture, effective authentication workflows, and data caching. I am also actively studying microservices architecture concepts to continue growing as a backend developer.
             </p>
           </div>
         </div>

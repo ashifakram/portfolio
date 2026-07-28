@@ -41,26 +41,25 @@ uniform vec2 u_resolution;
 void main() {
     vec2 uv = v_texCoord;
     
-    // Google colors
-    vec3 blue = vec3(0.2588, 0.5216, 0.9569);   // #4285F4
-    vec3 red = vec3(0.9176, 0.2627, 0.2078);    // #EA4335
+    // Google 4-color motion palette
+    vec3 blue   = vec3(0.2588, 0.5216, 0.9569); // #4285F4
+    vec3 red    = vec3(0.9176, 0.2627, 0.2078); // #EA4335
     vec3 yellow = vec3(0.9843, 0.7373, 0.0196); // #FBBC05
-    vec3 green = vec3(0.2039, 0.6588, 0.3255);  // #34A853
+    vec3 green  = vec3(0.2039, 0.6588, 0.3255); // #34A853
 
-    float t = u_time * 0.2;
+    float t = u_time * 0.25;
     
-    // Create organic movement using sine waves
-    float n1 = sin(uv.x * 3.0 + t) * 0.5 + 0.5;
-    float n2 = sin(uv.y * 2.0 - t * 1.2) * 0.5 + 0.5;
-    float n3 = sin((uv.x + uv.y) * 1.5 + t * 0.8) * 0.5 + 0.5;
+    // Dynamic sine wave color motion
+    float n1 = sin(uv.x * 2.5 + t) * 0.5 + 0.5;
+    float n2 = sin(uv.y * 2.2 - t * 0.9) * 0.5 + 0.5;
+    float n3 = sin((uv.x + uv.y) * 1.8 + t * 0.6) * 0.5 + 0.5;
     
-    // Mix colors based on UV and time-based noise
-    vec3 color = mix(blue, red, n1 * n2);
-    color = mix(color, yellow, n2 * n3);
-    color = mix(color, green, n3 * n1);
+    vec3 color = mix(blue, red, n1);
+    color = mix(color, yellow, n2);
+    color = mix(color, green, n3);
     
-    // Soften the effect with dark background
-    color = mix(color, vec3(0.02, 0.02, 0.05), 0.85);
+    // Ambient dark blending for crisp text readability
+    color = mix(color, vec3(0.035, 0.035, 0.043), 0.78);
     
     gl_FragColor = vec4(color, 1.0);
 }`;
@@ -133,4 +132,4 @@ void main() {
   );
 };
 
-export default ShaderBackground;
+export default React.memo(ShaderBackground);

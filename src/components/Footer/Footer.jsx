@@ -16,16 +16,31 @@ const Footer = () => {
           
           {/* Column 1: Branding & Intro */}
           <div className="space-y-4">
-            <div className="font-['Hanken_Grotesk'] text-2xl font-extrabold text-[#e9ddff] tracking-tight">
+            <div className="font-['Hanken_Grotesk'] text-2xl font-extrabold tracking-tight google-text-motion">
               ASHIF.DEV
             </div>
             <p className="font-['Inter'] text-sm text-gray-400 leading-relaxed">
               Crafting high-performance digital experiences with Java, Spring Boot, and modern web technologies.
             </p>
             <div className="flex gap-4 text-[#cfbcff]">
-              <span className="material-symbols-outlined text-lg">terminal</span>
-              <span className="material-symbols-outlined text-lg">code</span>
-              <span className="material-symbols-outlined text-lg">verified</span>
+              <div className="relative group flex items-center justify-center">
+                <span className="material-symbols-outlined text-lg cursor-help" aria-label="Backend & CLI">terminal</span>
+                <span className="absolute bottom-full mb-2 hidden group-hover:flex items-center bg-[#16171d] text-[#e9ddff] text-[10px] font-['Geist_Mono'] px-2.5 py-1 rounded-lg border border-white/10 whitespace-nowrap shadow-xl z-20 pointer-events-none">
+                  Backend & CLI
+                </span>
+              </div>
+              <div className="relative group flex items-center justify-center">
+                <span className="material-symbols-outlined text-lg cursor-help" aria-label="Clean Architecture">code</span>
+                <span className="absolute bottom-full mb-2 hidden group-hover:flex items-center bg-[#16171d] text-[#e9ddff] text-[10px] font-['Geist_Mono'] px-2.5 py-1 rounded-lg border border-white/10 whitespace-nowrap shadow-xl z-20 pointer-events-none">
+                  Clean Architecture
+                </span>
+              </div>
+              <div className="relative group flex items-center justify-center">
+                <span className="material-symbols-outlined text-lg cursor-help" aria-label="Verified Experience">verified</span>
+                <span className="absolute bottom-full mb-2 hidden group-hover:flex items-center bg-[#16171d] text-[#e9ddff] text-[10px] font-['Geist_Mono'] px-2.5 py-1 rounded-lg border border-white/10 whitespace-nowrap shadow-xl z-20 pointer-events-none">
+                  Verified Experience
+                </span>
+              </div>
             </div>
           </div>
 
@@ -69,10 +84,11 @@ const Footer = () => {
           <div className="flex flex-col items-start md:items-end justify-between">
             <button
               onClick={scrollToTop}
+              aria-label="Scroll back to top of page"
               className="group flex items-center gap-2 text-white font-['Inter'] text-sm font-semibold hover:text-[#cfbcff] transition-colors"
             >
               Back to Top
-              <span className="material-symbols-outlined bg-white/5 p-2 rounded-full group-hover:-translate-y-1 transition-transform text-base">
+              <span className="material-symbols-outlined bg-white/5 p-2 rounded-full group-hover:-translate-y-1 transition-transform text-base" aria-hidden="true">
                 arrow_upward
               </span>
             </button>
@@ -86,7 +102,8 @@ const Footer = () => {
                   href="https://github.com/ashifakram"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors flex items-center gap-1.5"
+                  aria-label="Ashif Akram GitHub Profile"
+                  className="text-gray-300 hover:text-white transition-colors flex items-center gap-1.5"
                 >
                   <FaGithub className="text-base" /> GitHub
                 </a>
@@ -94,7 +111,8 @@ const Footer = () => {
                   href="https://www.linkedin.com/in/ashif-akram-893996227"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-[#0A66C2] transition-colors flex items-center gap-1.5"
+                  aria-label="Ashif Akram LinkedIn Profile"
+                  className="text-gray-300 hover:text-[#0A66C2] transition-colors flex items-center gap-1.5"
                 >
                   <FaLinkedin className="text-base text-[#0A66C2]" /> LinkedIn
                 </a>

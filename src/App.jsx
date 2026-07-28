@@ -25,14 +25,16 @@ function App() {
       smoothWheel: true,
     });
 
+    let animId;
     function raf(time) {
       lenis.raf(time);
-      requestAnimationFrame(raf);
+      animId = requestAnimationFrame(raf);
     }
 
-    requestAnimationFrame(raf);
+    animId = requestAnimationFrame(raf);
 
     return () => {
+      cancelAnimationFrame(animId);
       lenis.destroy();
     };
   }, []);
@@ -40,11 +42,26 @@ function App() {
   return (
     <HelmetProvider>
       <Helmet>
-        <title>Engineering Philosophy | Ashif Akram</title>
+        <title>Ashif Akram | Java Full Stack Developer</title>
         <meta
           name="description"
-          content="Engineering Philosophy and Core Strengths of Ashif Akram - Java Full Stack Developer specializing in Spring Boot, React, and scalable backend architecture."
+          content="Portfolio of Ashif Akram - Java Full Stack Developer specializing in Java, Spring Boot, REST APIs, and React."
         />
+        <link rel="canonical" href="https://ashifakram.github.io/" />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ashifakram.github.io/" />
+        <meta property="og:title" content="Ashif Akram | Java Full Stack Developer" />
+        <meta property="og:description" content="Portfolio of Ashif Akram - Java Full Stack Developer specializing in Java, Spring Boot, REST APIs, and React." />
+        <meta property="og:image" content="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1000&auto=format&fit=crop" />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content="https://ashifakram.github.io/" />
+        <meta name="twitter:title" content="Ashif Akram | Java Full Stack Developer" />
+        <meta name="twitter:description" content="Portfolio of Ashif Akram - Java Full Stack Developer specializing in Java, Spring Boot, REST APIs, and React." />
+        <meta name="twitter:image" content="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1000&auto=format&fit=crop" />
       </Helmet>
 
       <div className="relative min-h-screen bg-[#09090b] text-gray-100 selection:bg-[#6750a4] selection:text-white font-['Inter']">

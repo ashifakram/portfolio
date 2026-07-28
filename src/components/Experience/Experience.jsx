@@ -12,7 +12,7 @@ const Experience = () => {
       >
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-4">
           <div>
-            <h2 className="font-['Hanken_Grotesk'] text-4xl sm:text-5xl font-bold text-[#e9ddff]">
+            <h2 className="font-['Hanken_Grotesk'] text-4xl sm:text-5xl font-bold google-text-motion">
               Career Journey
             </h2>
             <p className="text-gray-400 font-['Inter'] text-base mt-2">
@@ -33,7 +33,7 @@ const Experience = () => {
                 Jan 2025 – Present
               </span>
               <h3 className="font-['Hanken_Grotesk'] text-2xl sm:text-3xl font-bold mt-4 text-[#e9ddff]">
-                ESQUARE SOFTWARE
+                Esquare(E2) Software India Pvt Ltd.
               </h3>
               <p className="text-gray-300 font-medium font-['Inter'] text-base mt-1">
                 Junior Software Engineer
@@ -56,60 +56,53 @@ const Experience = () => {
 
                 <ul className="space-y-4 text-gray-300 font-['Inter'] text-sm sm:text-base mb-8">
                   <li className="flex gap-3">
-                    <span className="material-symbols-outlined text-[#6750a4] text-base mt-1">
+                    <span className="material-symbols-outlined text-[#6750a4] text-base mt-1" aria-hidden="true">
                       check_circle
                     </span>
                     <span>
-                      Architected complex <strong className="text-white font-semibold">Spring Boot REST APIs</strong> for patient booking workflows and document management.
+                      Developed robust <strong className="text-white font-semibold">Spring Boot REST APIs</strong> for core application workflows and data management.
                     </span>
                   </li>
                   <li className="flex gap-3">
-                    <span className="material-symbols-outlined text-[#6750a4] text-base mt-1">
+                    <span className="material-symbols-outlined text-[#6750a4] text-base mt-1" aria-hidden="true">
                       check_circle
                     </span>
                     <span>
-                      Implemented robust security using <strong className="text-white font-semibold">Spring Security & JWT</strong> with Role-Based Access Control (RBAC).
+                      Implemented application security using <strong className="text-white font-semibold">Spring Security & JWT</strong> with Role-Based Access Control (RBAC).
                     </span>
                   </li>
                   <li className="flex gap-3">
-                    <span className="material-symbols-outlined text-[#6750a4] text-base mt-1">
+                    <span className="material-symbols-outlined text-[#6750a4] text-base mt-1" aria-hidden="true">
                       check_circle
                     </span>
                     <span>
-                      Optimized system performance and data retrieval speeds using <strong className="text-white font-semibold">Redis caching</strong> strategies.
+                      Optimized data retrieval speed by implementing <strong className="text-white font-semibold">Redis caching</strong> strategies.
                     </span>
                   </li>
                   <li className="flex gap-3">
-                    <span className="material-symbols-outlined text-[#6750a4] text-base mt-1">
+                    <span className="material-symbols-outlined text-[#6750a4] text-base mt-1" aria-hidden="true">
                       check_circle
                     </span>
                     <span>
-                      Integrated backend systems with <strong className="text-white font-semibold">React</strong> frontend to ensure seamless user experiences.
+                      Connected backend services with <strong className="text-white font-semibold">React</strong> frontend components to deliver interactive user dashboards.
                     </span>
                   </li>
                   <li className="flex gap-3">
-                    <span className="material-symbols-outlined text-[#6750a4] text-base mt-1">
+                    <span className="material-symbols-outlined text-[#6750a4] text-base mt-1" aria-hidden="true">
                       check_circle
                     </span>
                     <span>
-                      Standardized API documentation through <strong className="text-white font-semibold">Swagger/OpenAPI</strong> and centralized exception handling.
+                      Documented API endpoints using <strong className="text-white font-semibold">Swagger / OpenAPI</strong> and established centralized exception handling.
                     </span>
                   </li>
                 </ul>
 
                 <div className="flex flex-wrap gap-2 border-t border-white/10 pt-6">
-                  <div className="flex items-center gap-1.5 px-3 py-1 rounded bg-[#09090b]/60 border border-white/10 text-xs font-['Geist_Mono'] text-gray-300">
-                    <span className="material-symbols-outlined text-[14px]">terminal</span> Java
-                  </div>
-                  <div className="flex items-center gap-1.5 px-3 py-1 rounded bg-[#09090b]/60 border border-white/10 text-xs font-['Geist_Mono'] text-gray-300">
-                    <span className="material-symbols-outlined text-[14px]">database</span> MySQL
-                  </div>
-                  <div className="flex items-center gap-1.5 px-3 py-1 rounded bg-[#09090b]/60 border border-white/10 text-xs font-['Geist_Mono'] text-gray-300">
-                    <span className="material-symbols-outlined text-[14px]">shield</span> Security
-                  </div>
-                  <div className="flex items-center gap-1.5 px-3 py-1 rounded bg-[#09090b]/60 border border-white/10 text-xs font-['Geist_Mono'] text-gray-300">
-                    <span className="material-symbols-outlined text-[14px]">history</span> Jira
-                  </div>
+                  {['Java', 'Spring Boot', 'Spring Security', 'JWT', 'REST APIs', 'Redis', 'Swagger', 'React', 'MySQL', 'Git', 'Jira'].map((tech) => (
+                    <div key={tech} className="flex items-center gap-1.5 px-3 py-1 rounded bg-[#09090b]/60 border border-white/10 text-xs font-['Geist_Mono'] text-[#cfbcff]">
+                      {tech}
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>

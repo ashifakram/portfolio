@@ -1,0 +1,15 @@
+{
+  "name": "Ashif Akram - Portfolio",
+  "short_name": "Ashif.Dev",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#09090b",
+  "theme_color": "#6750a4"
+}

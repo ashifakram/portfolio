@@ -1,23 +1,13 @@
 export const experiences = [
   {
-    role: "Java Full Stack Developer",
-    company: "Tech Solutions Inc.",
-    period: "2023 - Present",
-    description: "Developing scalable full-stack applications using Spring Boot microservices, React, and PostgreSQL.",
+    role: "Junior Software Engineer",
+    company: "Esquare(E2) Software India Pvt Ltd.",
+    period: "Jan 2025 – Present",
+    description: "Building scalable backend services and responsive frontend integrations for enterprise applications.",
     highlights: [
-      "Optimized database queries reducing API latency by 40%",
-      "Implemented OAuth2 and JWT security filters",
-      "Built responsive React dashboards using Tailwind CSS"
-    ]
-  },
-  {
-    role: "Software Developer Intern",
-    company: "Innovate Labs",
-    period: "2022 - 2023",
-    description: "Assisted in building REST APIs and frontend components for web applications.",
-    highlights: [
-      "Developed reusable UI components with React",
-      "Automated unit test cases achieving 85% coverage"
+      "Developed secure REST APIs using Spring Boot and Spring Security with JWT authentication",
+      "Integrated Redis caching layers for optimized data retrieval",
+      "Built interactive dashboard interfaces with React and Tailwind CSS"
     ]
   }
 ];

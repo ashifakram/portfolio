@@ -34,6 +34,12 @@
     margin: 0;
     padding: 0;
   }
+
+  :focus-visible {
+    outline: 2px solid #cfbcff;
+    outline-offset: 3px;
+    border-radius: 0.375rem;
+  }
 }
 
 /* Glass card styling matching Stitch design exactly */
@@ -50,19 +56,19 @@
   background: rgba(255, 255, 255, 0.06);
 }
 
-/* Scroll progress bar */
+/* Scroll progress bar with Google 4-color gradient */
 #scroll-progress {
   position: fixed;
   top: 0;
   left: 0;
   height: 3px;
-  background: linear-gradient(to right, #6750a4, #cfbcff);
+  background: linear-gradient(to right, #4285F4, #EA4335, #FBBC05, #34A853);
   z-index: 100;
   width: 0%;
   transition: width 0.1s ease-out;
 }
 
-/* Moving border animation matching Stitch design */
+/* Moving border animation with Google brand color motion */
 .moving-border {
   position: relative;
   border-radius: 1.5rem;
@@ -78,11 +84,13 @@
   height: 200%;
   background: conic-gradient(
     transparent,
-    rgba(207, 188, 255, 0.4),
-    rgba(231, 195, 101, 0.4),
-    transparent 30%
+    rgba(66, 133, 244, 0.7),
+    rgba(234, 67, 53, 0.7),
+    rgba(251, 188, 5, 0.7),
+    rgba(52, 168, 83, 0.7),
+    transparent 65%
   );
-  animation: rotate 6s linear infinite;
+  animation: rotate 5s linear infinite;
   z-index: 0;
 }
 
@@ -122,5 +130,27 @@
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #3f3f46;
+}
+
+/* Google 4-Color Animated Gradient Text */
+.google-text-motion {
+  background: linear-gradient(
+    90deg,
+    #4285F4,
+    #EA4335,
+    #FBBC05,
+    #34A853,
+    #4285F4
+  );
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: googleGradientMove 6s linear infinite;
+}
+
+@keyframes googleGradientMove {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 300% 50%; }
 }
 

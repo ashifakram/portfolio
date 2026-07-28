@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { FaGithub } from 'react-icons/fa6';
 
 const navItems = [
   { label: 'Home', href: '#home' },
@@ -45,9 +46,9 @@ const Navbar = () => {
       <div id="scroll-progress" style={{ width: `${scrollProgress}%` }} />
 
       {/* TopNavBar */}
-      <nav className="fixed top-0 w-full z-50 bg-[#09090b]/80 backdrop-blur-md border-b border-white/10 shadow-sm transition-all duration-300">
+      <nav aria-label="Main Navigation" className="fixed top-0 w-full z-50 bg-[#09090b]/80 backdrop-blur-md border-b border-white/10 shadow-sm transition-all duration-300">
         <div className="flex justify-between items-center max-w-[1200px] mx-auto px-6 h-20">
-          <a href="#home" className="font-['Hanken_Grotesk'] text-2xl md:text-3xl font-extrabold tracking-tighter text-[#e9ddff]">
+          <a href="#home" className="font-['Hanken_Grotesk'] text-2xl md:text-3xl font-extrabold tracking-tighter google-text-motion">
             ASHIF.DEV
           </a>
 
@@ -58,6 +59,7 @@ const Navbar = () => {
                 <a
                   key={item.label}
                   href={item.href}
+                  aria-current={isCurrent ? 'page' : undefined}
                   className={`font-['Inter'] text-sm transition-colors duration-300 py-1 ${
                     isCurrent
                       ? 'text-[#e9ddff] font-bold border-b-2 border-[#6750a4]'
@@ -76,23 +78,24 @@ const Navbar = () => {
                 href="https://github.com/ashifakram"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="GitHub Profile"
+                aria-label="Ashif Akram GitHub Profile"
                 className="p-2 text-gray-400 hover:text-[#e9ddff] transition-colors flex items-center justify-center"
               >
-                <span className="material-symbols-outlined text-[20px]">code</span>
+                <FaGithub className="text-lg" />
               </a>
               <a
                 href="#skills"
-                aria-label="Technical Skills & Terminal"
+                aria-label="View Technical Skills section"
                 className="p-2 text-gray-400 hover:text-[#e9ddff] transition-colors flex items-center justify-center"
               >
-                <span className="material-symbols-outlined text-[20px]">terminal</span>
+                <span className="material-symbols-outlined text-[20px]" aria-hidden="true">terminal</span>
               </a>
             </div>
 
             <a
               href="/Ashif_Akram_Resume.pdf"
               download="Ashif_Akram_Resume.pdf"
+              aria-label="Download Resume PDF"
               className="bg-[#6750a4] hover:bg-[#4f378a] text-white px-6 py-2.5 rounded-full font-['Inter'] font-semibold text-sm active:scale-95 transition-all shadow-lg shadow-[#6750a4]/20"
             >
               Resume

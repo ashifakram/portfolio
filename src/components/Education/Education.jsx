@@ -63,6 +63,10 @@ const Education = () => {
                   src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Netaji_college_at_Garia.jpg/1920px-Netaji_college_at_Garia.jpg"
                   alt="Netaji Subhash Engineering College (NSEC) Garia, Kolkata"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                  decoding="async"
+                  width="400"
+                  height="400"
                   onError={(e) => {
                     e.target.src = "https://images.unsplash.com/photo-1541829070764-84a7d30dd3f3?q=80&w=1000&auto=format&fit=crop";
                   }}

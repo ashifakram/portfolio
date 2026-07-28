@@ -65,7 +65,7 @@ const Contact = () => {
         </span>
         <h2 className="font-['Hanken_Grotesk'] text-4xl sm:text-6xl font-extrabold text-white leading-tight mb-4">
           Let's Build Something <br className="hidden sm:block" />
-          <span className="text-[#cfbcff]">Amazing Together</span>
+          <span className="google-text-motion">Amazing Together</span>
         </h2>
         <p className="font-['Inter'] text-base sm:text-lg text-gray-300 max-w-xl mx-auto lg:mx-0 leading-relaxed">
           Currently exploring new opportunities and open to discussions about Java, Spring Boot architectures, or React-based frontend challenges.
@@ -149,23 +149,23 @@ const Contact = () => {
           <div className="absolute -top-24 -right-24 w-48 h-48 bg-[#6750a4]/20 rounded-full blur-[80px] pointer-events-none" />
 
           {formState === 'submitted' && (
-            <div className="mb-6 p-4 rounded-xl bg-emerald-500/20 border border-emerald-500/30 text-emerald-300 text-sm font-['Inter'] flex items-center gap-3">
-              <span className="material-symbols-outlined text-emerald-400">check_circle</span>
-              Thank you! Your message has been recorded and submitted directly to Google Sheets.
+            <div className="mb-6 p-4 rounded-xl bg-emerald-500/20 border border-emerald-500/30 text-emerald-300 text-sm font-['Inter'] flex items-center gap-3" role="alert">
+              <span className="material-symbols-outlined text-emerald-400" aria-hidden="true">check_circle</span>
+              Thank you! Your message has been submitted successfully.
             </div>
           )}
 
           {formState === 'error' && (
-            <div className="mb-6 p-4 rounded-xl bg-rose-500/20 border border-rose-500/30 text-rose-300 text-sm font-['Inter'] flex items-center gap-3">
-              <span className="material-symbols-outlined text-rose-400">error</span>
+            <div className="mb-6 p-4 rounded-xl bg-rose-500/20 border border-rose-500/30 text-rose-300 text-sm font-['Inter'] flex items-center gap-3" role="alert">
+              <span className="material-symbols-outlined text-rose-400" aria-hidden="true">error</span>
               Oops! Something went wrong while sending your message. Please try again.
             </div>
           )}
 
-          <form onSubmit={handleSubmit(onSubmit)} className="space-y-6 relative z-10">
+          <form onSubmit={handleSubmit(onSubmit)} className="space-y-6 relative z-10" noValidate>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div className="space-y-2">
-                <label className="block font-['Geist_Mono'] text-xs text-gray-400 uppercase" htmlFor="name">
+                <label className="block font-['Geist_Mono'] text-xs text-gray-300 uppercase" htmlFor="name">
                   Full Name
                 </label>
                 <input
@@ -173,7 +173,7 @@ const Contact = () => {
                   type="text"
                   placeholder="John Doe"
                   {...register("name", { required: "Full name is required" })}
-                  className="w-full bg-[#16171d]/90 border border-white/10 rounded-xl p-4 text-white placeholder-gray-500 focus:outline-none focus:border-[#cfbcff] transition-all font-['Inter'] text-sm"
+                  className="w-full bg-[#16171d]/90 border border-white/10 rounded-xl p-4 text-white placeholder-gray-500 focus:outline-none focus:border-[#cfbcff] focus:ring-1 focus:ring-[#cfbcff] transition-all font-['Inter'] text-sm"
                 />
                 {errors.name && (
                   <span className="text-xs text-rose-400 font-['Geist_Mono']">{errors.name.message}</span>
@@ -181,7 +181,7 @@ const Contact = () => {
               </div>
 
               <div className="space-y-2">
-                <label className="block font-['Geist_Mono'] text-xs text-gray-400 uppercase" htmlFor="email">
+                <label className="block font-['Geist_Mono'] text-xs text-gray-300 uppercase" htmlFor="email">
                   Email Address
                 </label>
                 <input
@@ -192,7 +192,7 @@ const Contact = () => {
                     required: "Email is required",
                     pattern: { value: /^\S+@\S+$/i, message: "Invalid email address" }
                   })}
-                  className="w-full bg-[#16171d]/90 border border-white/10 rounded-xl p-4 text-white placeholder-gray-500 focus:outline-none focus:border-[#cfbcff] transition-all font-['Inter'] text-sm"
+                  className="w-full bg-[#16171d]/90 border border-white/10 rounded-xl p-4 text-white placeholder-gray-500 focus:outline-none focus:border-[#cfbcff] focus:ring-1 focus:ring-[#cfbcff] transition-all font-['Inter'] text-sm"
                 />
                 {errors.email && (
                   <span className="text-xs text-rose-400 font-['Geist_Mono']">{errors.email.message}</span>
@@ -201,7 +201,7 @@ const Contact = () => {
             </div>
 
             <div className="space-y-2">
-              <label className="block font-['Geist_Mono'] text-xs text-gray-400 uppercase" htmlFor="subject">
+              <label className="block font-['Geist_Mono'] text-xs text-gray-300 uppercase" htmlFor="subject">
                 Subject
               </label>
               <input
@@ -209,7 +209,7 @@ const Contact = () => {
                 type="text"
                 placeholder="Project Inquiry / Opportunity"
                 {...register("subject", { required: "Subject is required" })}
-                className="w-full bg-[#16171d]/90 border border-white/10 rounded-xl p-4 text-white placeholder-gray-500 focus:outline-none focus:border-[#cfbcff] transition-all font-['Inter'] text-sm"
+                className="w-full bg-[#16171d]/90 border border-white/10 rounded-xl p-4 text-white placeholder-gray-500 focus:outline-none focus:border-[#cfbcff] focus:ring-1 focus:ring-[#cfbcff] transition-all font-['Inter'] text-sm"
               />
               {errors.subject && (
                 <span className="text-xs text-rose-400 font-['Geist_Mono']">{errors.subject.message}</span>
@@ -217,7 +217,7 @@ const Contact = () => {
             </div>
 
             <div className="space-y-2">
-              <label className="block font-['Geist_Mono'] text-xs text-gray-400 uppercase" htmlFor="message">
+              <label className="block font-['Geist_Mono'] text-xs text-gray-300 uppercase" htmlFor="message">
                 Your Message
               </label>
               <textarea
@@ -225,7 +225,7 @@ const Contact = () => {
                 rows="4"
                 placeholder="Tell me about your project or technical challenge..."
                 {...register("message", { required: "Message is required" })}
-                className="w-full bg-[#16171d]/90 border border-white/10 rounded-xl p-4 text-white placeholder-gray-500 focus:outline-none focus:border-[#cfbcff] transition-all font-['Inter'] text-sm resize-none"
+                className="w-full bg-[#16171d]/90 border border-white/10 rounded-xl p-4 text-white placeholder-gray-500 focus:outline-none focus:border-[#cfbcff] focus:ring-1 focus:ring-[#cfbcff] transition-all font-['Inter'] text-sm resize-none"
               />
               {errors.message && (
                 <span className="text-xs text-rose-400 font-['Geist_Mono']">{errors.message.message}</span>
@@ -235,6 +235,7 @@ const Contact = () => {
             <button
               type="submit"
               disabled={formState === 'submitting'}
+              aria-label="Send message via contact form"
               className={`w-full py-4 rounded-xl font-['Hanken_Grotesk'] font-bold text-base flex items-center justify-center gap-2 transition-all shadow-xl ${
                 formState === 'submitted'
                   ? 'bg-emerald-600 text-white shadow-emerald-600/30'
@@ -244,17 +245,17 @@ const Contact = () => {
               {formState === 'submitting' ? (
                 <>
                   <span>Sending...</span>
-                  <span className="material-symbols-outlined animate-spin text-xl">refresh</span>
+                  <span className="material-symbols-outlined animate-spin text-xl" aria-hidden="true">refresh</span>
                 </>
               ) : formState === 'submitted' ? (
                 <>
-                  <span>Message Sent to Google Sheets!</span>
-                  <span className="material-symbols-outlined text-xl">check_circle</span>
+                  <span>Message Sent!</span>
+                  <span className="material-symbols-outlined text-xl" aria-hidden="true">check_circle</span>
                 </>
               ) : (
                 <>
                   <span>Send Message</span>
-                  <span className="material-symbols-outlined text-xl">send</span>
+                  <span className="material-symbols-outlined text-xl" aria-hidden="true">send</span>
                 </>
               )}
             </button>

@@ -100,7 +100,7 @@ const Skills = () => {
       >
         <h2 className="font-['Hanken_Grotesk'] text-3xl sm:text-4xl font-bold mb-10 flex items-center gap-3 text-white">
           <span className="material-symbols-outlined text-[#cfbcff] text-3xl">terminal</span>
-          Technical Proficiency
+          <span className="google-text-motion">Technical Proficiency</span>
         </h2>
 
         <div className="grid grid-cols-12 gap-6">
@@ -124,20 +124,15 @@ const Skills = () => {
           {/* Languages Card */}
           <div className="col-span-12 md:col-span-4 glass-card p-8 rounded-3xl border border-white/10">
             <h3 className="font-['Hanken_Grotesk'] text-2xl font-semibold mb-6 text-white">Core Stack</h3>
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-wrap gap-3">
               {languages.map((lang) => (
-                <div key={lang.name} className="flex items-center justify-between gap-4">
-                  <div className="flex items-center gap-2">
-                    {lang.icon}
-                    <span className="font-['Inter'] text-sm font-medium text-gray-200">{lang.name}</span>
-                  </div>
-                  <div className="w-24 sm:w-28 h-2 bg-white/10 rounded-full overflow-hidden">
-                    <div
-                      className="h-full bg-gradient-to-r from-[#6750a4] to-[#cfbcff] rounded-full transition-all duration-1000"
-                      style={{ width: `${lang.level}%` }}
-                    />
-                  </div>
-                </div>
+                <span
+                  key={lang.name}
+                  className="px-4 py-2.5 bg-white/5 border border-white/10 rounded-full font-['Geist_Mono'] text-xs text-gray-200 font-medium flex items-center gap-2.5 hover:bg-white/10 transition-colors"
+                >
+                  <span className="flex items-center justify-center">{lang.icon}</span>
+                  {lang.name}
+                </span>
               ))}
             </div>
           </div>
