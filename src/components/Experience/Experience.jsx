@@ -95,15 +95,24 @@ const Experience = () => {
                       Documented API endpoints using <strong className="text-white font-semibold">Swagger / OpenAPI</strong> and established centralized exception handling.
                     </span>
                   </li>
+                  <li className="flex gap-3">
+                    <span className="material-symbols-outlined text-[#6750a4] text-base mt-1" aria-hidden="true">
+                      check_circle
+                    </span>
+                    <span>
+                      Guaranteed backend reliability and code coverage by writing unit and integration tests with <strong className="text-white font-semibold">JUnit & Mockito</strong>.
+                    </span>
+                  </li>
                 </ul>
 
                 <div className="flex flex-wrap gap-2 border-t border-white/10 pt-6">
-                  {['Java', 'Spring Boot', 'Spring Security', 'JWT', 'REST APIs', 'Redis', 'Swagger', 'React', 'MySQL', 'Git', 'Jira'].map((tech) => (
+                  {['Java', 'Spring Boot', 'Spring Security', 'JWT', 'REST APIs', 'Redis', 'JUnit', 'Mockito', 'Swagger', 'React', 'MySQL', 'Git', 'Jira'].map((tech) => (
                     <div key={tech} className="flex items-center gap-1.5 px-3 py-1 rounded bg-[#09090b]/60 border border-white/10 text-xs font-['Geist_Mono'] text-[#cfbcff]">
                       {tech}
                     </div>
                   ))}
                 </div>
+
               </div>
             </div>
           </div>

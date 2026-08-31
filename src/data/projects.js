@@ -20,12 +20,22 @@ export const flagshipProject = {
 
 export const enterpriseProjects = [
   {
+    id: 'locator-ai',
+    tag: 'AI & Location Services',
+    title: 'Locator AI',
+    description: 'An intelligent location discovery platform built with Java 17 & Spring Boot 3 integrating Google Places API for real-time location discovery and dynamic distance filtering.',
+    image: 'https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?q=80&w=1000&auto=format&fit=crop',
+    icons: ['location_on', 'smart_toy'],
+    githubUrl: 'https://github.com/ashifakram'
+  },
+  {
     id: 'hrms',
     tag: 'Enterprise System',
     title: 'HRMS Portal',
     description: 'A web portal designed to streamline human resource workflows, employee record management, and operational reporting.',
     image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1000&auto=format&fit=crop',
-    icons: ['coffee', 'database'],
+    icons: ['badge', 'database'],
+
     githubUrl: 'https://github.com/ashifakram'
   },
   {
@@ -47,3 +57,4 @@ export const enterpriseProjects = [
     githubUrl: 'https://github.com/ashifakram'
   }
 ];
+

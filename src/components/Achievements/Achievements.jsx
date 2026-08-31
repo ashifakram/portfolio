@@ -73,30 +73,7 @@ const Achievements = () => {
         ))}
       </motion.section>
 
-      {/* CTA Section */}
-      <motion.section
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8, delay: 0.3 }}
-      >
-        <div className="glass-card bg-[#6750a4]/10 p-12 sm:p-16 rounded-[3rem] text-center relative overflow-hidden border border-[#6750a4]/30">
-          <div className="relative z-10">
-            <h2 className="font-['Hanken_Grotesk'] text-3xl sm:text-5xl font-extrabold text-white mb-8">
-              Interested in discussing backend architecture?
-            </h2>
-            <a
-              href="#contact"
-              className="inline-block bg-[#6750a4] hover:bg-[#4f378a] text-white px-10 py-4 rounded-full font-['Hanken_Grotesk'] font-bold text-lg hover:scale-105 active:scale-95 transition-all shadow-lg shadow-[#6750a4]/40"
-            >
-              Let's Connect
-            </a>
-          </div>
 
-          <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-[#6750a4]/20 blur-[100px] rounded-full pointer-events-none" />
-          <div className="absolute -top-20 -right-20 w-64 h-64 bg-[#765b00]/20 blur-[100px] rounded-full pointer-events-none" />
-        </div>
-      </motion.section>
 
     </div>
   );

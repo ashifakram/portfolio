@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useForm } from 'react-hook-form';
 import { FaGithub, FaLinkedin } from 'react-icons/fa6';
+import { Tilt3DCard } from '../Common/Tilt3DCard';
+import CelebrationModal from './CelebrationModal';
 
 const GOOGLE_FORM_ACTION_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSdTsffoi_qMa4DlVTcTo2gtMNgFAySdFdyjaxkXHcYtut3p7Q/formResponse';
 
@@ -15,6 +17,8 @@ const ENTRY_IDS = {
 const Contact = () => {
   const { register, handleSubmit, formState: { errors }, reset } = useForm();
   const [formState, setFormState] = useState('idle'); // 'idle' | 'submitting' | 'submitted' | 'error'
+  const [showModal, setShowModal] = useState(false);
+  const [submittedData, setSubmittedData] = useState(null);
 
   const onSubmit = async (data) => {
     setFormState('submitting');
@@ -34,16 +38,19 @@ const Contact = () => {
       });
 
       setFormState('submitted');
+      setSubmittedData(data);
+      setShowModal(true);
       reset();
 
       setTimeout(() => {
         setFormState('idle');
-      }, 5000);
+      }, 6000);
     } catch (error) {
       console.error("Form submission failed:", error);
       setFormState('error');
     }
   };
+
 
   return (
     <section id="contact" className="py-16 max-w-[1200px] mx-auto px-6 relative">
@@ -78,27 +85,29 @@ const Contact = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8, delay: 0.2 }}
-        className="grid grid-cols-1 lg:grid-cols-2 gap-12"
+        className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start"
       >
         
         {/* Left Column: Location, Email, Phone Cards */}
-        <div className="flex flex-col justify-between space-y-6">
+        <div className="flex flex-col space-y-6">
           <div className="space-y-4">
             {/* Location */}
-            <div className="glass-card p-5 rounded-2xl flex items-center gap-4 group border border-white/10">
-              <div className="w-12 h-12 rounded-full bg-[#6750a4]/20 border border-[#6750a4]/30 flex items-center justify-center group-hover:bg-[#6750a4]/40 transition-colors">
-                <span className="material-symbols-outlined text-[#cfbcff] text-2xl">location_on</span>
+            <div className="glass-card p-5 rounded-2xl flex items-center gap-4 group border border-white/10 hover:border-[#cfbcff]/40 transition-all">
+              <div className="w-12 h-12 rounded-full bg-[#6750a4]/20 border border-[#6750a4]/30 flex items-center justify-center group-hover:bg-[#6750a4] transition-colors">
+                <span className="material-symbols-outlined text-[#cfbcff] group-hover:text-white text-2xl">location_on</span>
               </div>
               <div>
-                <p className="font-['Geist_Mono'] text-xs text-gray-400">Location</p>
+                <p className="font-['Geist_Mono'] text-xs text-gray-400 uppercase">Location Availability</p>
                 <p className="font-['Inter'] text-base font-semibold text-white">Bengaluru, KA, India</p>
+                <p className="font-['Geist_Mono'] text-xs text-[#e7c365] mt-1 font-medium">Open to: Bengaluru, Hyderabad, Pune & Mumbai</p>
               </div>
+
             </div>
 
             {/* Email */}
-            <div className="glass-card p-5 rounded-2xl flex items-center gap-4 group border border-white/10">
-              <div className="w-12 h-12 rounded-full bg-[#6750a4]/20 border border-[#6750a4]/30 flex items-center justify-center group-hover:bg-[#6750a4]/40 transition-colors">
-                <span className="material-symbols-outlined text-[#cfbcff] text-2xl">mail</span>
+            <div className="glass-card p-5 rounded-2xl flex items-center gap-4 group border border-white/10 hover:border-[#cfbcff]/40 transition-all">
+              <div className="w-12 h-12 rounded-full bg-[#6750a4]/20 border border-[#6750a4]/30 flex items-center justify-center group-hover:bg-[#6750a4] transition-colors">
+                <span className="material-symbols-outlined text-[#cfbcff] group-hover:text-white text-2xl">mail</span>
               </div>
               <div>
                 <p className="font-['Geist_Mono'] text-xs text-gray-400">Email</p>
@@ -109,9 +118,9 @@ const Contact = () => {
             </div>
 
             {/* Phone */}
-            <div className="glass-card p-5 rounded-2xl flex items-center gap-4 group border border-white/10">
-              <div className="w-12 h-12 rounded-full bg-[#6750a4]/20 border border-[#6750a4]/30 flex items-center justify-center group-hover:bg-[#6750a4]/40 transition-colors">
-                <span className="material-symbols-outlined text-[#cfbcff] text-2xl">call</span>
+            <div className="glass-card p-5 rounded-2xl flex items-center gap-4 group border border-white/10 hover:border-[#cfbcff]/40 transition-all">
+              <div className="w-12 h-12 rounded-full bg-[#6750a4]/20 border border-[#6750a4]/30 flex items-center justify-center group-hover:bg-[#6750a4] transition-colors">
+                <span className="material-symbols-outlined text-[#cfbcff] group-hover:text-white text-2xl">call</span>
               </div>
               <div>
                 <p className="font-['Geist_Mono'] text-xs text-gray-400">Phone</p>
@@ -128,7 +137,7 @@ const Contact = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub Profile"
-              className="w-12 h-12 glass-card rounded-full flex items-center justify-center hover:bg-[#6750a4]/30 hover:border-[#cfbcff]/50 transition-all border border-white/10 text-white"
+              className="icon-glow-btn w-12 h-12 glass-card rounded-full flex items-center justify-center border border-white/10 text-white shadow-lg"
             >
               <FaGithub className="text-xl" />
             </a>
@@ -137,134 +146,148 @@ const Contact = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn Profile"
-              className="w-12 h-12 glass-card rounded-full flex items-center justify-center hover:bg-[#6750a4]/30 hover:border-[#cfbcff]/50 transition-all border border-white/10 text-white hover:text-[#0A66C2]"
+              className="icon-glow-btn w-12 h-12 glass-card rounded-full flex items-center justify-center border border-white/10 text-white shadow-lg"
             >
-              <FaLinkedin className="text-xl" />
+              <FaLinkedin className="text-xl text-[#0A66C2]" />
             </a>
           </div>
+
         </div>
 
-        {/* Right Column: Form */}
-        <div className="glass-card p-8 sm:p-12 rounded-3xl relative overflow-hidden border border-white/10">
-          <div className="absolute -top-24 -right-24 w-48 h-48 bg-[#6750a4]/20 rounded-full blur-[80px] pointer-events-none" />
+        {/* Right Column: Form Container with subtle, micro 3D movement only */}
+        <Tilt3DCard intensity={3} scale={1.005} glow={false} className="rounded-3xl">
+          <div className="glass-card p-8 sm:p-10 rounded-3xl relative overflow-hidden border border-white/10">
+            <div className="absolute -top-24 -right-24 w-48 h-48 bg-[#6750a4]/20 rounded-full blur-[80px] pointer-events-none" />
 
-          {formState === 'submitted' && (
-            <div className="mb-6 p-4 rounded-xl bg-emerald-500/20 border border-emerald-500/30 text-emerald-300 text-sm font-['Inter'] flex items-center gap-3" role="alert">
-              <span className="material-symbols-outlined text-emerald-400" aria-hidden="true">check_circle</span>
-              Thank you! Your message has been submitted successfully.
-            </div>
-          )}
+            {formState === 'submitted' && (
+              <div className="mb-6 p-4 rounded-xl bg-emerald-500/20 border border-emerald-500/30 text-emerald-300 text-sm font-['Inter'] flex items-center gap-3" role="alert">
+                <span className="material-symbols-outlined text-emerald-400" aria-hidden="true">check_circle</span>
+                Thank you! Your message has been submitted successfully.
+              </div>
+            )}
 
-          {formState === 'error' && (
-            <div className="mb-6 p-4 rounded-xl bg-rose-500/20 border border-rose-500/30 text-rose-300 text-sm font-['Inter'] flex items-center gap-3" role="alert">
-              <span className="material-symbols-outlined text-rose-400" aria-hidden="true">error</span>
-              Oops! Something went wrong while sending your message. Please try again.
-            </div>
-          )}
+            {formState === 'error' && (
+              <div className="mb-6 p-4 rounded-xl bg-rose-500/20 border border-rose-500/30 text-rose-300 text-sm font-['Inter'] flex items-center gap-3" role="alert">
+                <span className="material-symbols-outlined text-rose-400" aria-hidden="true">error</span>
+                Oops! Something went wrong while sending your message. Please try again.
+              </div>
+            )}
 
-          <form onSubmit={handleSubmit(onSubmit)} className="space-y-6 relative z-10" noValidate>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <form onSubmit={handleSubmit(onSubmit)} className="space-y-6 relative z-10" noValidate>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div className="space-y-2">
+                  <label className="block font-['Geist_Mono'] text-xs text-gray-300 uppercase" htmlFor="name">
+                    Full Name
+                  </label>
+                  <input
+                    id="name"
+                    type="text"
+                    placeholder="John Doe"
+                    {...register("name", { required: "Full name is required" })}
+                    className="w-full bg-[#16171d]/90 border border-white/10 rounded-xl p-4 text-white placeholder-gray-500 focus:outline-none focus:border-[#cfbcff] focus:ring-1 focus:ring-[#cfbcff] transition-all font-['Inter'] text-sm"
+                  />
+                  {errors.name && (
+                    <span className="text-xs text-rose-400 font-['Geist_Mono']">{errors.name.message}</span>
+                  )}
+                </div>
+
+                <div className="space-y-2">
+                  <label className="block font-['Geist_Mono'] text-xs text-gray-300 uppercase" htmlFor="email">
+                    Email Address
+                  </label>
+                  <input
+                    id="email"
+                    type="email"
+                    placeholder="john@example.com"
+                    {...register("email", {
+                      required: "Email is required",
+                      pattern: { value: /^\S+@\S+$/i, message: "Invalid email address" }
+                    })}
+                    className="w-full bg-[#16171d]/90 border border-white/10 rounded-xl p-4 text-white placeholder-gray-500 focus:outline-none focus:border-[#cfbcff] focus:ring-1 focus:ring-[#cfbcff] transition-all font-['Inter'] text-sm"
+                  />
+                  {errors.email && (
+                    <span className="text-xs text-rose-400 font-['Geist_Mono']">{errors.email.message}</span>
+                  )}
+                </div>
+              </div>
+
               <div className="space-y-2">
-                <label className="block font-['Geist_Mono'] text-xs text-gray-300 uppercase" htmlFor="name">
-                  Full Name
+                <label className="block font-['Geist_Mono'] text-xs text-gray-300 uppercase" htmlFor="subject">
+                  Subject
                 </label>
                 <input
-                  id="name"
+                  id="subject"
                   type="text"
-                  placeholder="John Doe"
-                  {...register("name", { required: "Full name is required" })}
+                  placeholder="Project Inquiry / Opportunity"
+                  {...register("subject", { required: "Subject is required" })}
                   className="w-full bg-[#16171d]/90 border border-white/10 rounded-xl p-4 text-white placeholder-gray-500 focus:outline-none focus:border-[#cfbcff] focus:ring-1 focus:ring-[#cfbcff] transition-all font-['Inter'] text-sm"
                 />
-                {errors.name && (
-                  <span className="text-xs text-rose-400 font-['Geist_Mono']">{errors.name.message}</span>
+                {errors.subject && (
+                  <span className="text-xs text-rose-400 font-['Geist_Mono']">{errors.subject.message}</span>
                 )}
               </div>
 
               <div className="space-y-2">
-                <label className="block font-['Geist_Mono'] text-xs text-gray-300 uppercase" htmlFor="email">
-                  Email Address
+                <label className="block font-['Geist_Mono'] text-xs text-gray-300 uppercase" htmlFor="message">
+                  Your Message
                 </label>
-                <input
-                  id="email"
-                  type="email"
-                  placeholder="john@example.com"
-                  {...register("email", {
-                    required: "Email is required",
-                    pattern: { value: /^\S+@\S+$/i, message: "Invalid email address" }
-                  })}
-                  className="w-full bg-[#16171d]/90 border border-white/10 rounded-xl p-4 text-white placeholder-gray-500 focus:outline-none focus:border-[#cfbcff] focus:ring-1 focus:ring-[#cfbcff] transition-all font-['Inter'] text-sm"
+                <textarea
+                  id="message"
+                  rows="4"
+                  placeholder="Tell me about your project or technical challenge..."
+                  {...register("message", { required: "Message is required" })}
+                  className="w-full bg-[#16171d]/90 border border-white/10 rounded-xl p-4 text-white placeholder-gray-500 focus:outline-none focus:border-[#cfbcff] focus:ring-1 focus:ring-[#cfbcff] transition-all font-['Inter'] text-sm resize-none"
                 />
-                {errors.email && (
-                  <span className="text-xs text-rose-400 font-['Geist_Mono']">{errors.email.message}</span>
+                {errors.message && (
+                  <span className="text-xs text-rose-400 font-['Geist_Mono']">{errors.message.message}</span>
                 )}
               </div>
-            </div>
 
-            <div className="space-y-2">
-              <label className="block font-['Geist_Mono'] text-xs text-gray-300 uppercase" htmlFor="subject">
-                Subject
-              </label>
-              <input
-                id="subject"
-                type="text"
-                placeholder="Project Inquiry / Opportunity"
-                {...register("subject", { required: "Subject is required" })}
-                className="w-full bg-[#16171d]/90 border border-white/10 rounded-xl p-4 text-white placeholder-gray-500 focus:outline-none focus:border-[#cfbcff] focus:ring-1 focus:ring-[#cfbcff] transition-all font-['Inter'] text-sm"
-              />
-              {errors.subject && (
-                <span className="text-xs text-rose-400 font-['Geist_Mono']">{errors.subject.message}</span>
-              )}
-            </div>
+              <button
+                type="submit"
+                disabled={formState === 'submitting'}
+                aria-label="Send message via contact form"
+                className={`btn-modern-primary w-full py-4 rounded-xl font-['Hanken_Grotesk'] font-bold text-base flex items-center justify-center gap-2 transition-all cursor-pointer group ${
+                  formState === 'submitted'
+                    ? '!bg-emerald-600 !text-white shadow-emerald-600/30'
+                    : ''
+                }`}
+              >
+                {formState === 'submitting' ? (
+                  <>
+                    <span>Sending...</span>
+                    <span className="material-symbols-outlined animate-spin text-xl" aria-hidden="true">refresh</span>
+                  </>
+                ) : formState === 'submitted' ? (
+                  <>
+                    <span>Message Sent!</span>
+                    <span className="material-symbols-outlined text-xl" aria-hidden="true">check_circle</span>
+                  </>
+                ) : (
+                  <>
+                    <span>Send Message</span>
+                    <span className="material-symbols-outlined text-xl group-hover:translate-x-1 group-hover:-translate-y-0.5 group-hover:rotate-12 transition-transform duration-300" aria-hidden="true">send</span>
+                  </>
+                )}
+              </button>
 
-            <div className="space-y-2">
-              <label className="block font-['Geist_Mono'] text-xs text-gray-300 uppercase" htmlFor="message">
-                Your Message
-              </label>
-              <textarea
-                id="message"
-                rows="4"
-                placeholder="Tell me about your project or technical challenge..."
-                {...register("message", { required: "Message is required" })}
-                className="w-full bg-[#16171d]/90 border border-white/10 rounded-xl p-4 text-white placeholder-gray-500 focus:outline-none focus:border-[#cfbcff] focus:ring-1 focus:ring-[#cfbcff] transition-all font-['Inter'] text-sm resize-none"
-              />
-              {errors.message && (
-                <span className="text-xs text-rose-400 font-['Geist_Mono']">{errors.message.message}</span>
-              )}
-            </div>
-
-            <button
-              type="submit"
-              disabled={formState === 'submitting'}
-              aria-label="Send message via contact form"
-              className={`w-full py-4 rounded-xl font-['Hanken_Grotesk'] font-bold text-base flex items-center justify-center gap-2 transition-all shadow-xl ${
-                formState === 'submitted'
-                  ? 'bg-emerald-600 text-white shadow-emerald-600/30'
-                  : 'bg-[#6750a4] hover:bg-[#4f378a] text-white shadow-[#6750a4]/30 hover:scale-[1.02] active:scale-[0.98]'
-              }`}
-            >
-              {formState === 'submitting' ? (
-                <>
-                  <span>Sending...</span>
-                  <span className="material-symbols-outlined animate-spin text-xl" aria-hidden="true">refresh</span>
-                </>
-              ) : formState === 'submitted' ? (
-                <>
-                  <span>Message Sent!</span>
-                  <span className="material-symbols-outlined text-xl" aria-hidden="true">check_circle</span>
-                </>
-              ) : (
-                <>
-                  <span>Send Message</span>
-                  <span className="material-symbols-outlined text-xl" aria-hidden="true">send</span>
-                </>
-              )}
-            </button>
-          </form>
-        </div>
+            </form>
+          </div>
+        </Tilt3DCard>
 
       </motion.div>
+
+      {/* Celebration Success Pop-up Modal with Confetti Cannons */}
+      <CelebrationModal
+        isOpen={showModal}
+        onClose={() => setShowModal(false)}
+        formData={submittedData}
+      />
     </section>
   );
 };
 
+
 export default Contact;
+
+

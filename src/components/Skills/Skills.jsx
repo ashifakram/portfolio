@@ -15,14 +15,17 @@ import {
   SiRedis,
   SiReact,
   SiNodedotjs,
+  SiApachekafka,
+  SiJunit5,
 } from 'react-icons/si';
-import { FaJava } from 'react-icons/fa6';
+import { FaJava, FaDatabase } from 'react-icons/fa6';
 import { TbLayersIntersect, TbApi, TbCertificate, TbLayoutGrid } from 'react-icons/tb';
 
 const backendStack = [
   { name: 'Spring Boot', icon: <SiSpringboot className="text-[#6DB33F] text-base" /> },
   { name: 'Spring Security', icon: <SiSpringsecurity className="text-[#6DB33F] text-base" /> },
   { name: 'Microservices', icon: <TbLayoutGrid className="text-[#cfbcff] text-base" /> },
+  { name: 'Apache Kafka', icon: <SiApachekafka className="text-[#E0234E] text-base" /> },
   { name: 'Hibernate/JPA', icon: <SiHibernate className="text-[#59666C] dark:text-[#b0bec5] text-base" /> },
   { name: 'REST APIs', icon: <TbApi className="text-[#e7c365] text-base" /> },
   { name: 'JWT Auth', icon: <TbCertificate className="text-[#e7c365] text-base" /> },
@@ -38,6 +41,7 @@ const languages = [
 const databases = [
   { name: 'MySQL', icon: <SiMysql className="text-[#4479A1] text-base" /> },
   { name: 'PostgreSQL', icon: <SiPostgresql className="text-[#4169E1] text-base" /> },
+  { name: 'Oracle DB', icon: <FaDatabase className="text-[#F80000] text-base" /> },
   { name: 'MongoDB', icon: <SiMongodb className="text-[#47A248] text-base" /> },
   { name: 'Redis', icon: <SiRedis className="text-[#DC382D] text-base" /> },
 ];
@@ -45,11 +49,13 @@ const databases = [
 const concepts = [
   { icon: <TbLayersIntersect className="text-[#cfbcff] text-lg" />, name: 'OOP & DSA' },
   { icon: <TbApi className="text-[#e7c365] text-lg" />, name: 'API Design' },
-  { icon: <SiDocker className="text-[#2496ED] text-lg" />, name: 'Docker Containerization' },
+  { icon: <SiJunit5 className="text-[#25A162] text-lg" />, name: 'JUnit & Mockito' },
+  { icon: <SiDocker className="text-[#2496ED] text-lg" />, name: 'Docker' },
   { icon: <SiGit className="text-[#F05032] text-lg" />, name: 'Git & Version Control' },
   { icon: <SiPostman className="text-[#FF6C37] text-lg" />, name: 'Postman API Testing' },
-  { icon: <SiSwagger className="text-[#85EA2D] text-lg" />, name: 'Swagger Documentation' },
+  { icon: <SiSwagger className="text-[#85EA2D] text-lg" />, name: 'Swagger Specs' },
 ];
+
 
 const processSteps = [
   { step: 1, name: 'Analysis' },
@@ -112,9 +118,9 @@ const Skills = () => {
               {backendStack.map((tech) => (
                 <span
                   key={tech.name}
-                  className="px-4 py-2.5 bg-[#6750a4]/20 border border-[#6750a4]/30 rounded-full font-['Geist_Mono'] text-xs text-[#e0d2ff] font-medium flex items-center gap-2.5 hover:bg-[#6750a4]/40 transition-colors"
+                  className="group px-4 py-2.5 bg-[#6750a4]/20 border border-[#6750a4]/30 rounded-full font-['Geist_Mono'] text-xs text-[#e0d2ff] font-medium flex items-center gap-2.5 hover:bg-[#6750a4]/40 hover:scale-105 hover:border-[#cfbcff]/60 hover:shadow-[0_0_15px_rgba(207,188,255,0.3)] transition-all duration-300 cursor-default"
                 >
-                  <span className="flex items-center justify-center">{tech.icon}</span>
+                  <span className="flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300">{tech.icon}</span>
                   {tech.name}
                 </span>
               ))}
@@ -128,9 +134,9 @@ const Skills = () => {
               {languages.map((lang) => (
                 <span
                   key={lang.name}
-                  className="px-4 py-2.5 bg-white/5 border border-white/10 rounded-full font-['Geist_Mono'] text-xs text-gray-200 font-medium flex items-center gap-2.5 hover:bg-white/10 transition-colors"
+                  className="group px-4 py-2.5 bg-white/5 border border-white/10 rounded-full font-['Geist_Mono'] text-xs text-gray-200 font-medium flex items-center gap-2.5 hover:bg-white/10 hover:scale-105 hover:border-[#cfbcff]/50 hover:shadow-[0_0_15px_rgba(207,188,255,0.2)] transition-all duration-300 cursor-default"
                 >
-                  <span className="flex items-center justify-center">{lang.icon}</span>
+                  <span className="flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300">{lang.icon}</span>
                   {lang.name}
                 </span>
               ))}
@@ -144,9 +150,9 @@ const Skills = () => {
               {databases.map((db) => (
                 <span
                   key={db.name}
-                  className="px-4 py-2 bg-white/5 border border-white/10 rounded-xl font-['Geist_Mono'] text-xs text-gray-300 flex items-center gap-2.5 hover:bg-white/10 transition-colors"
+                  className="group px-4 py-2 bg-white/5 border border-white/10 rounded-xl font-['Geist_Mono'] text-xs text-gray-300 flex items-center gap-2.5 hover:bg-white/10 hover:scale-105 hover:border-[#cfbcff]/50 hover:shadow-[0_0_15px_rgba(207,188,255,0.2)] transition-all duration-300 cursor-default"
                 >
-                  <span className="flex items-center justify-center">{db.icon}</span>
+                  <span className="flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300">{db.icon}</span>
                   {db.name}
                 </span>
               ))}
@@ -158,8 +164,8 @@ const Skills = () => {
             <h3 className="font-['Hanken_Grotesk'] text-2xl font-semibold mb-6 text-white">DevOps & Tools</h3>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
               {concepts.map((item) => (
-                <div key={item.name} className="flex items-center gap-3 p-3 bg-white/5 rounded-2xl border border-white/5">
-                  <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center flex-shrink-0">
+                <div key={item.name} className="group flex items-center gap-3 p-3 bg-white/5 rounded-2xl border border-white/5 hover:border-[#cfbcff]/40 hover:bg-white/10 hover:scale-[1.03] transition-all duration-300 cursor-default">
+                  <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300">
                     {item.icon}
                   </div>
                   <span className="font-['Inter'] text-xs font-medium text-gray-200">{item.name}</span>
@@ -167,6 +173,7 @@ const Skills = () => {
               ))}
             </div>
           </div>
+
 
         </div>
       </motion.section>

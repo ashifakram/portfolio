@@ -1,7 +1,15 @@
 import React, { useEffect, useRef } from 'react';
+import AmbientBackground from './AmbientBackground';
+import ConstellationBackground from './ConstellationBackground';
+
 
 const ShaderBackground = () => {
   const canvasRef = useRef(null);
+
+
+
+
+
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -125,7 +133,11 @@ void main() {
       <div className="absolute inset-0 w-full h-full opacity-40">
         <canvas ref={canvasRef} className="w-full h-full block" />
       </div>
-      {/* Background Blobs matching Stitch */}
+      {/* Soft Ambient Aurora Layer */}
+      <AmbientBackground />
+      {/* Interactive Small Star Constellation Particle Network */}
+      <ConstellationBackground />
+      {/* Ambient Background Glow Blobs */}
       <div className="fixed top-1/4 -left-20 w-96 h-96 bg-[#4f378a]/20 blur-[120px] rounded-full z-0 pointer-events-none" />
       <div className="fixed bottom-1/4 -right-20 w-96 h-96 bg-[#63597c]/20 blur-[120px] rounded-full z-0 pointer-events-none" />
     </div>
@@ -133,3 +145,8 @@ void main() {
 };
 
 export default React.memo(ShaderBackground);
+
+
+
+
+

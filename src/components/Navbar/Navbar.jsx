@@ -79,16 +79,16 @@ const Navbar = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Ashif Akram GitHub Profile"
-                className="p-2 text-gray-400 hover:text-[#e9ddff] transition-colors flex items-center justify-center"
+                className="icon-glow-btn w-9 h-9 rounded-full glass-card border border-white/10 text-gray-300 hover:text-[#e9ddff] flex items-center justify-center"
               >
                 <FaGithub className="text-lg" />
               </a>
               <a
                 href="#skills"
                 aria-label="View Technical Skills section"
-                className="p-2 text-gray-400 hover:text-[#e9ddff] transition-colors flex items-center justify-center"
+                className="icon-glow-btn w-9 h-9 rounded-full glass-card border border-white/10 text-gray-300 hover:text-[#e9ddff] flex items-center justify-center"
               >
-                <span className="material-symbols-outlined text-[20px]" aria-hidden="true">terminal</span>
+                <span className="material-symbols-outlined text-[18px]" aria-hidden="true">terminal</span>
               </a>
             </div>
 
@@ -96,11 +96,12 @@ const Navbar = () => {
               href="/Ashif_Akram_Resume.pdf"
               download="Ashif_Akram_Resume.pdf"
               aria-label="Download Resume PDF"
-              className="bg-[#6750a4] hover:bg-[#4f378a] text-white px-6 py-2.5 rounded-full font-['Inter'] font-semibold text-sm active:scale-95 transition-all shadow-lg shadow-[#6750a4]/20"
+              className="btn-modern-primary px-6 py-2.5 rounded-full font-['Inter'] font-semibold text-sm transition-all"
             >
               Resume
             </a>
           </div>
+
         </div>
       </nav>
     </>

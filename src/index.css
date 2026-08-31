@@ -68,6 +68,82 @@
   transition: width 0.1s ease-out;
 }
 
+/* Modern Primary Shimmer Button */
+.btn-modern-primary {
+  position: relative;
+  overflow: hidden;
+  background-color: #6750a4;
+  color: #ffffff;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 10px 25px -5px rgba(103, 80, 164, 0.3);
+}
+
+.btn-modern-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.25),
+    transparent
+  );
+  transition: transform 0.6s ease;
+}
+
+.btn-modern-primary:hover::before {
+  transform: translateX(200%);
+}
+
+.btn-modern-primary:hover {
+  background-color: #4f378a;
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px -5px rgba(103, 80, 164, 0.5), 0 0 20px rgba(207, 188, 255, 0.4);
+}
+
+.btn-modern-primary:active {
+  transform: translateY(0) scale(0.97);
+}
+
+/* Modern Secondary Glass Button */
+.btn-modern-secondary {
+  position: relative;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-modern-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(207, 188, 255, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -5px rgba(207, 188, 255, 0.2), 0 0 15px rgba(207, 188, 255, 0.2);
+}
+
+.btn-modern-secondary:active {
+  transform: translateY(0) scale(0.97);
+}
+
+/* Modern Icon Hover Glow Circle */
+.icon-glow-btn {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.icon-glow-btn:hover {
+  transform: translateY(-2px) scale(1.1) rotate(6deg);
+  box-shadow: 0 0 20px rgba(207, 188, 255, 0.5);
+  border-color: rgba(207, 188, 255, 0.6);
+}
+
+.icon-glow-btn:active {
+  transform: scale(0.95);
+}
+
 /* Moving border animation with Google brand color motion */
 .moving-border {
   position: relative;
@@ -153,4 +229,3 @@
   0% { background-position: 0% 50%; }
   100% { background-position: 300% 50%; }
 }
-

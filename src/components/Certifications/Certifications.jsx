@@ -60,11 +60,14 @@ const whyHireMe = [
 ];
 
 const focusRoadmap = [
-  { title: 'Spring Cloud', sub: 'Microservices', icon: 'cloud_done', border: 'border-l-[#6750a4]' },
+  { title: 'Spring AI', sub: 'Java AI Integration', icon: 'psychology', border: 'border-l-[#6750a4]' },
+  { title: 'LangChain4j', sub: 'LLMs & AI Agents', icon: 'smart_toy', border: 'border-l-[#e7c365]' },
+  { title: 'RAG Architecture', sub: 'Vector DB & Search', icon: 'neurology', border: 'border-l-[#34A853]' },
+  { title: 'Spring Cloud', sub: 'Microservices', icon: 'cloud_done', border: 'border-l-[#4285F4]' },
   { title: 'Kafka', sub: 'Event Streaming', icon: 'developer_board', border: 'border-l-[#e7c365]' },
-  { title: 'Docker', sub: 'Containerization', icon: 'dock', border: 'border-l-[#cdc0e9]' },
-  { title: 'System Design', sub: 'Architectural Patterns', icon: 'architecture', border: 'border-l-[#cfbcff]' }
+  { title: 'System Design', sub: 'Distributed Systems', icon: 'architecture', border: 'border-l-[#cfbcff]' }
 ];
+
 
 const Certifications = () => {
   return (
@@ -157,11 +160,11 @@ const Certifications = () => {
               Current Focus & Roadmap
             </h2>
             <p className="text-base text-gray-300 font-['Inter'] mb-10 max-w-2xl leading-relaxed">
-              Always evolving. Currently deepening my expertise in enterprise-grade distributed systems and modern dev-ops cycles.
+              Always evolving. Currently expanding my expertise into AI-driven Java backend development using Spring AI, LangChain4j, RAG architectures, and enterprise distributed systems.
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {focusRoadmap.map((f) => (
-                <div key={f.title} className={`glass-card px-6 py-4 rounded-2xl border-l-4 ${f.border} flex items-center gap-4 border border-white/10`}>
+                <div key={f.title} className={`glass-card px-6 py-4 rounded-2xl border-l-4 ${f.border} flex items-center gap-4 border border-white/10 hover:border-white/20 transition-all`}>
                   <span className="material-symbols-outlined text-[#cfbcff] text-2xl">{f.icon}</span>
                   <div>
                     <h4 className="font-['Hanken_Grotesk'] font-bold text-white text-base">{f.title}</h4>
@@ -170,6 +173,7 @@ const Certifications = () => {
                 </div>
               ))}
             </div>
+
           </div>
         </div>
       </motion.section>

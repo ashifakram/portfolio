@@ -13,9 +13,9 @@ import Education from './components/Education/Education';
 import Certifications from './components/Certifications/Certifications';
 import Skills from './components/Skills/Skills';
 import Projects from './components/Projects/Projects';
-import Achievements from './components/Achievements/Achievements';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
+
 
 function App() {
   useEffect(() => {
@@ -42,25 +42,26 @@ function App() {
   return (
     <HelmetProvider>
       <Helmet>
-        <title>Ashif Akram | Java Full Stack Developer</title>
+        <title>Ashif Akram | Java Backend & Full Stack Developer</title>
         <meta
           name="description"
-          content="Portfolio of Ashif Akram - Java Full Stack Developer specializing in Java, Spring Boot, REST APIs, and React."
+          content="Portfolio of Ashif Akram - Java Backend & Full Stack Developer specializing in Java, Spring Boot, REST APIs, Microservices, and React."
         />
         <link rel="canonical" href="https://ashifakram.github.io/portfolio/" />
 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ashifakram.github.io/portfolio/" />
-        <meta property="og:title" content="Ashif Akram | Java Full Stack Developer" />
-        <meta property="og:description" content="Portfolio of Ashif Akram - Java Full Stack Developer specializing in Java, Spring Boot, REST APIs, and React." />
+        <meta property="og:title" content="Ashif Akram | Java Backend & Full Stack Developer" />
+        <meta property="og:description" content="Portfolio of Ashif Akram - Java Backend & Full Stack Developer specializing in Java, Spring Boot, REST APIs, Microservices, and React." />
         <meta property="og:image" content="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1000&auto=format&fit=crop" />
 
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content="https://ashifakram.github.io/portfolio/" />
-        <meta name="twitter:title" content="Ashif Akram | Java Full Stack Developer" />
-        <meta name="twitter:description" content="Portfolio of Ashif Akram - Java Full Stack Developer specializing in Java, Spring Boot, REST APIs, and React." />
+        <meta name="twitter:title" content="Ashif Akram | Java Backend & Full Stack Developer" />
+        <meta name="twitter:description" content="Portfolio of Ashif Akram - Java Backend & Full Stack Developer specializing in Java, Spring Boot, REST APIs, Microservices, and React." />
+
         <meta name="twitter:image" content="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1000&auto=format&fit=crop" />
       </Helmet>
 
@@ -78,9 +79,9 @@ function App() {
           <Skills />
           <CaseStudy />
           <Projects />
-          <Achievements />
           <Contact />
         </main>
+
 
         <Footer />
       </div>

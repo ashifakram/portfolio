@@ -79,9 +79,10 @@ const Education = () => {
                   <span className="text-[#e9ddff] font-['Geist_Mono'] text-xs px-3.5 py-1 bg-[#6750a4]/20 rounded-full border border-[#6750a4]/30 font-medium">
                     2018 – 2022
                   </span>
-                  <span className="animated-badge text-white font-bold text-xs px-4 py-1 rounded-full shadow-lg font-['Geist_Mono']">
+                  <span className="bg-[#6750a4] text-white font-bold text-xs px-4 py-1 rounded-full shadow-lg font-['Geist_Mono'] border border-[#cfbcff]/30">
                     CGPA: 9.23 / 10
                   </span>
+
                 </div>
 
                 <h3 className="font-['Hanken_Grotesk'] text-2xl sm:text-3xl font-bold text-white mb-2">

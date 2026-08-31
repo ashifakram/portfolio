@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import { FaGithub } from 'react-icons/fa6';
 import { flagshipProject, enterpriseProjects } from '../../data/projects';
 
+
+
 const sahayakFlow = [
   { icon: 'person', title: 'Teacher', sub: 'End User' },
   { icon: 'laptop_mac', title: 'React SPA', sub: 'Frontend Layer' },
@@ -164,9 +166,9 @@ const Projects = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`View live demo of ${flagshipProject.title}`}
-              className="px-8 py-3.5 bg-[#6750a4] hover:bg-[#4f378a] text-white rounded-full font-['Hanken_Grotesk'] font-bold flex items-center justify-center gap-2 transition-all shadow-lg shadow-[#6750a4]/30"
+              className="btn-modern-primary px-8 py-3.5 rounded-full font-['Hanken_Grotesk'] font-bold flex items-center justify-center gap-2 transition-all group"
             >
-              <span className="material-symbols-outlined text-xl" aria-hidden="true">rocket_launch</span> Live Demo
+              <span className="material-symbols-outlined text-xl group-hover:rotate-12 group-hover:scale-110 transition-transform duration-300" aria-hidden="true">rocket_launch</span> Live Demo
             </a>
           )}
           <a
@@ -174,11 +176,12 @@ const Projects = () => {
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`View ${flagshipProject.title} source code on GitHub`}
-            className="px-8 py-3.5 bg-[#6750a4] hover:bg-[#4f378a] text-white rounded-full font-['Hanken_Grotesk'] font-bold flex items-center justify-center gap-2 transition-all shadow-lg shadow-[#6750a4]/30"
+            className="btn-modern-secondary px-8 py-3.5 rounded-full font-['Hanken_Grotesk'] font-bold flex items-center justify-center gap-2 transition-all group"
           >
-            <span className="material-symbols-outlined text-xl" aria-hidden="true">code</span> View on GitHub
+            <span className="material-symbols-outlined text-xl group-hover:rotate-12 group-hover:scale-110 transition-transform duration-300" aria-hidden="true">code</span> View on GitHub
           </a>
         </div>
+
       </motion.section>
 
       {/* Enterprise Applications Grid */}
@@ -197,7 +200,7 @@ const Projects = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 gap-6">
           {enterpriseProjects.map((proj) => (
             <div
               key={proj.id}
@@ -254,6 +257,8 @@ const Projects = () => {
             </div>
           ))}
         </div>
+
+
       </motion.section>
 
       {/* Explore GitHub CTA Section */}
@@ -279,17 +284,18 @@ const Projects = () => {
               href="https://github.com/ashifakram"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto px-10 py-3.5 bg-[#6750a4] hover:bg-[#4f378a] text-white rounded-full font-['Hanken_Grotesk'] font-bold flex items-center justify-center gap-2 transition-all shadow-lg shadow-[#6750a4]/30"
+              className="btn-modern-primary w-full sm:w-auto px-10 py-3.5 rounded-full font-['Hanken_Grotesk'] font-bold flex items-center justify-center gap-2 transition-all group"
             >
-              <FaGithub className="text-xl" /> GitHub
+              <FaGithub className="text-xl group-hover:rotate-12 group-hover:scale-110 transition-transform duration-300" /> GitHub
             </a>
             <a
               href="#contact"
-              className="w-full sm:w-auto px-10 py-3.5 glass-card border border-white/20 text-white rounded-full font-['Hanken_Grotesk'] font-bold flex items-center justify-center gap-2 hover:bg-white/10 transition-all"
+              className="btn-modern-secondary w-full sm:w-auto px-10 py-3.5 rounded-full font-['Hanken_Grotesk'] font-bold flex items-center justify-center gap-2 transition-all group"
             >
-              <span className="material-symbols-outlined text-xl">mail</span> Contact Me
+              <span className="material-symbols-outlined text-xl group-hover:rotate-12 group-hover:scale-110 transition-transform duration-300">mail</span> Contact Me
             </a>
           </div>
+
         </div>
       </motion.section>
 

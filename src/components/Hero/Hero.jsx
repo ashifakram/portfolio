@@ -1,6 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin } from 'react-icons/fa6';
+import TypewriterText from './TypewriterText';
+
 
 const Hero = () => {
   return (
@@ -13,12 +15,18 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
+            className="flex flex-wrap items-center gap-3"
           >
             <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#6750a4]/20 text-[#e0d2ff] border border-[#6750a4]/30 font-['Geist_Mono'] text-xs uppercase tracking-widest font-medium">
               <span className="w-2 h-2 rounded-full bg-[#6750a4] animate-pulse" />
               Available for Opportunities
             </span>
+            <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#e7c365]/10 text-[#e7c365] border border-[#e7c365]/20 font-['Geist_Mono'] text-xs font-medium">
+              <span className="material-symbols-outlined text-sm">location_on</span>
+              Open to: Bengaluru, Hyderabad, Pune, Mumbai
+            </span>
           </motion.div>
+
 
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -29,14 +37,14 @@ const Hero = () => {
             Ashif Akram
           </motion.h1>
 
-          <motion.h2
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.25 }}
-            className="font-['Hanken_Grotesk'] text-2xl sm:text-3xl font-bold google-text-motion leading-snug"
           >
-            Java Full Stack Developer | Spring Boot | React | REST APIs | Redis | Microservices
-          </motion.h2>
+            <TypewriterText />
+          </motion.div>
+
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -57,20 +65,22 @@ const Hero = () => {
               href="/Ashif_Akram_Resume.pdf"
               download="Ashif_Akram_Resume.pdf"
               aria-label="Download Ashif Akram Resume (PDF)"
-              className="flex items-center gap-2 bg-[#6750a4] hover:bg-[#4f378a] text-white px-8 py-4 rounded-2xl font-semibold transition-all group shadow-xl shadow-[#6750a4]/20"
+              className="btn-modern-primary flex items-center gap-2 px-8 py-4 rounded-2xl font-semibold transition-all group"
             >
               <span>Download Resume</span>
-              <span className="material-symbols-outlined text-[20px] group-hover:translate-y-1 transition-transform" aria-hidden="true">
+              <span className="material-symbols-outlined text-[20px] group-hover:translate-y-1 group-hover:scale-110 transition-transform duration-300" aria-hidden="true">
                 download
               </span>
             </a>
             <a
               href="#contact"
               aria-label="Navigate to contact section"
-              className="flex items-center gap-2 glass-card px-8 py-4 rounded-2xl font-semibold text-white transition-all hover:bg-white/10"
+              className="btn-modern-secondary flex items-center gap-2 px-8 py-4 rounded-2xl font-semibold transition-all group"
             >
               <span>Contact Me</span>
-              <span className="material-symbols-outlined text-[20px]" aria-hidden="true">send</span>
+              <span className="material-symbols-outlined text-[20px] group-hover:translate-x-1 group-hover:-translate-y-0.5 group-hover:rotate-12 transition-transform duration-300" aria-hidden="true">
+                send
+              </span>
             </a>
           </motion.div>
 
@@ -78,29 +88,30 @@ const Hero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.45 }}
-            className="flex items-center gap-6 pt-4"
+            className="flex items-center gap-4 pt-4"
           >
             <a
               href="https://github.com/ashifakram"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Ashif Akram GitHub Profile"
-              className="text-gray-400 hover:text-white transition-colors flex items-center gap-2 font-['Geist_Mono'] text-sm"
+              className="icon-glow-btn glass-card px-5 py-2.5 rounded-xl text-gray-300 hover:text-white flex items-center gap-2 font-['Geist_Mono'] text-sm group"
             >
-              <FaGithub className="text-lg text-white" />
-              GitHub
+              <FaGithub className="text-lg text-white group-hover:scale-110 transition-transform" />
+              <span>GitHub</span>
             </a>
             <a
               href="https://www.linkedin.com/in/ashif-akram-893996227"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Ashif Akram LinkedIn Profile"
-              className="text-gray-400 hover:text-[#0A66C2] transition-colors flex items-center gap-2 font-['Geist_Mono'] text-sm"
+              className="icon-glow-btn glass-card px-5 py-2.5 rounded-xl text-gray-300 hover:text-[#0A66C2] flex items-center gap-2 font-['Geist_Mono'] text-sm group"
             >
-              <FaLinkedin className="text-lg text-[#0A66C2]" />
-              LinkedIn
+              <FaLinkedin className="text-lg text-[#0A66C2] group-hover:scale-110 transition-transform" />
+              <span>LinkedIn</span>
             </a>
           </motion.div>
+
         </div>
 
         {/* Right Column: Bento Cards */}

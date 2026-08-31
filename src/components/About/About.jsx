@@ -33,12 +33,14 @@ const About = () => {
             </div>
 
             <h2 className="font-['Hanken_Grotesk'] text-4xl sm:text-6xl font-extrabold text-[#e9ddff] mb-6 leading-tight">
-              Bridging <span className="google-text-motion">Backend</span> Power with Frontend <span className="google-text-motion">Finesse</span>.
+              Bridging <span className="google-text-motion">Backend</span> Power with Frontend <span className="google-text-motion">Precision</span>.
             </h2>
 
+
             <p className="font-['Inter'] text-base sm:text-lg text-gray-300 max-w-2xl mb-10 leading-relaxed">
-              I am <span className="text-white font-semibold">Ashif Akram</span>, a Junior Software Engineer based in <span className="text-[#e7c365]">Bengaluru, India</span>. At Esquare(E2) Software India Pvt Ltd., I build secure Java backend services and modern React applications with a focus on maintainability and performance.
+              I am <span className="text-white font-semibold">Ashif Akram</span>, a Junior Software Engineer based in <span className="text-[#e7c365]">Bengaluru, India</span> (open to opportunities in <span className="text-[#e0d2ff] font-medium">Bengaluru, Hyderabad, Pune & Mumbai</span>). At Esquare(E2) Software India Pvt Ltd., I build secure Java backend services and modern React applications with a focus on maintainability and performance.
             </p>
+
 
             {/* Stats Bento Row */}
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">

@@ -7,13 +7,14 @@ import {
 } from 'react-icons/si';
 import { FaAws } from 'react-icons/fa6';
 import {
-  TbInfinity,
   TbNetwork,
-  TbHierarchy2,
-  TbActivity,
-  TbRuler2,
   TbBinaryTree,
+  TbCpu,
+  TbBrain,
+  TbSparkles,
+  TbDatabase,
 } from 'react-icons/tb';
+
 
 const coreStrengths = [
   { title: 'Java Development', icon: 'terminal', span: 'col-span-1' },
@@ -29,17 +30,18 @@ const coreStrengths = [
 ];
 
 const exploringChips = [
+  { name: 'Spring AI', icon: <TbCpu className="text-[#6DB33F] text-base" /> },
+  { name: 'LangChain4j', icon: <TbBrain className="text-[#e7c365] text-base" /> },
+  { name: 'RAG Architecture', icon: <TbSparkles className="text-[#cfbcff] text-base" /> },
+  { name: 'Vector DBs', icon: <TbDatabase className="text-[#34A853] text-base" /> },
   { name: 'Spring Cloud', icon: <SiSpringboot className="text-[#6DB33F] text-base" /> },
   { name: 'Microservices', icon: <TbNetwork className="text-[#cfbcff] text-base" /> },
   { name: 'Kafka', icon: <SiApachekafka className="text-[#e9ddff] text-base" /> },
   { name: 'Docker', icon: <SiDocker className="text-[#2496ED] text-base" /> },
   { name: 'AWS', icon: <FaAws className="text-[#FF9900] text-base" /> },
-  { name: 'CI/CD', icon: <TbInfinity className="text-[#cfbcff] text-base" /> },
   { name: 'System Design', icon: <TbBinaryTree className="text-[#e7c365] text-base" /> },
-  { name: 'Distributed Systems', icon: <TbHierarchy2 className="text-[#cfbcff] text-base" /> },
-  { name: 'Observability', icon: <TbActivity className="text-[#e7c365] text-base" /> },
-  { name: 'Scalable Architecture', icon: <TbRuler2 className="text-[#cfbcff] text-base" /> },
 ];
+
 
 const Philosophy = () => {
   return (
