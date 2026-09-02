@@ -17,7 +17,11 @@ import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
 
 
+import Preloader from './components/Common/Preloader';
+
 function App() {
+  const [isPreloaderComplete, setIsPreloaderComplete] = React.useState(false);
+
   useEffect(() => {
     const lenis = new Lenis({
       duration: 1.2,
@@ -66,21 +70,24 @@ function App() {
       </Helmet>
 
       <div className="relative min-h-screen bg-[#09090b] text-gray-100 selection:bg-[#6750a4] selection:text-white font-['Inter']">
+        <Preloader onComplete={() => setIsPreloaderComplete(true)} />
         <ShaderBackground />
         <Navbar />
 
         <main className="relative z-10 space-y-12 pb-12">
-          <Hero />
+          <Hero startTyping={isPreloaderComplete} />
+
           <About />
-          <Philosophy />
           <Experience />
-          <Education />
-          <Certifications />
-          <Skills />
           <CaseStudy />
+          <Skills />
           <Projects />
+          <Certifications />
+          <Education />
+          <Philosophy />
           <Contact />
         </main>
+
 
 
         <Footer />

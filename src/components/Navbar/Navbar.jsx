@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { FaGithub } from 'react-icons/fa6';
+import BrandLogo from '../Common/BrandLogo';
 
 const navItems = [
   { label: 'Home', href: '#home' },
@@ -48,9 +49,11 @@ const Navbar = () => {
       {/* TopNavBar */}
       <nav aria-label="Main Navigation" className="fixed top-0 w-full z-50 bg-[#09090b]/80 backdrop-blur-md border-b border-white/10 shadow-sm transition-all duration-300">
         <div className="flex justify-between items-center max-w-[1200px] mx-auto px-6 h-20">
-          <a href="#home" className="font-['Hanken_Grotesk'] text-2xl md:text-3xl font-extrabold tracking-tighter google-text-motion">
-            ASHIF.DEV
+          <a href="#home" className="flex items-center gap-3 group font-['Hanken_Grotesk'] text-2xl md:text-3xl font-extrabold tracking-tighter">
+            <BrandLogo className="w-8 h-8 group-hover:scale-110 group-hover:rotate-12 transition-transform duration-300" />
+            <span className="google-text-motion">ASHIF.DEV</span>
           </a>
+
 
           <div className="hidden md:flex items-center gap-7">
             {navItems.map((item) => {

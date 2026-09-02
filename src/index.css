@@ -229,3 +229,15 @@
   0% { background-position: 0% 50%; }
   100% { background-position: 300% 50%; }
 }
+
+/* Magnetic Floating Tech Skill Pill */
+.skill-pill-magnetic {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.skill-pill-magnetic:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 10px 25px -5px rgba(207, 188, 255, 0.35), 0 0 15px rgba(207, 188, 255, 0.3);
+  border-color: rgba(207, 188, 255, 0.6) !important;
+}
+

@@ -4,11 +4,11 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa6';
 import TypewriterText from './TypewriterText';
 
 
-const Hero = () => {
+const Hero = ({ startTyping = false }) => {
   return (
     <section id="home" className="relative z-10 min-h-screen flex flex-col items-center justify-center pt-28 pb-16 px-6">
       <div className="max-w-[1200px] w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-        
+
         {/* Left Column: Branding & Info */}
         <div className="lg:col-span-7 flex flex-col gap-6">
           <motion.div
@@ -42,8 +42,9 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.25 }}
           >
-            <TypewriterText />
+            <TypewriterText startTyping={startTyping} />
           </motion.div>
+
 
 
           <motion.p

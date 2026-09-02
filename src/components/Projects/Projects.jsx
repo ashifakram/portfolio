@@ -2,6 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FaGithub } from 'react-icons/fa6';
 import { flagshipProject, enterpriseProjects } from '../../data/projects';
+import SpotlightCard from '../Common/SpotlightCard';
+
 
 
 
@@ -202,9 +204,9 @@ const Projects = () => {
 
         <div className="grid md:grid-cols-2 gap-6">
           {enterpriseProjects.map((proj) => (
-            <div
+            <SpotlightCard
               key={proj.id}
-              className="glass-card rounded-[2.5rem] p-6 group hover:border-[#cfbcff]/40 hover:-translate-y-1 transition-all duration-500 border border-white/10 flex flex-col justify-between"
+              className="rounded-[2.5rem] p-6 group flex flex-col justify-between"
             >
               <div>
                 <div className="h-48 w-full rounded-3xl overflow-hidden mb-6 relative">
@@ -254,9 +256,10 @@ const Projects = () => {
                   arrow_forward
                 </a>
               </div>
-            </div>
+            </SpotlightCard>
           ))}
         </div>
+
 
 
       </motion.section>

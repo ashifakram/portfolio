@@ -21,20 +21,38 @@ const ConstellationBackground = () => {
 
     window.addEventListener('resize', handleResize);
 
-    // Color palette for Star Nodes (Matching Theme)
-    const nodeColors = [
-      { r: 207, g: 188, b: 255 }, // Lavender (#cfbcff)
-      { r: 231, g: 195, b: 101 }, // Warm Gold (#e7c365)
-      { r: 103, g: 80,  b: 164 }, // Deep Purple (#6750a4)
-      { r: 66,  g: 133, b: 244 }, // Google Blue (#4285F4)
+    // Google 4-Color Palette matching google-text-motion gradient
+    const googlePalette = [
+      { r: 66, g: 133, b: 244 },  // #4285F4 (Blue)
+      { r: 234, g: 67, b: 53 },   // #EA4335 (Red)
+      { r: 251, g: 188, b: 5 },   // #FBBC05 (Yellow)
+      { r: 52, g: 168, b: 83 },   // #34A853 (Green)
     ];
+
+    // Helper: Interpolate between Google colors smoothly over 6 seconds
+    const getGoogleColor = (timeOffset) => {
+      const duration = 6.0; // 6 seconds loop
+      const normalizedTime = ((timeOffset % duration) + duration) % duration;
+      const t = (normalizedTime / duration) * googlePalette.length;
+      const idx = Math.floor(t);
+      const nextIdx = (idx + 1) % googlePalette.length;
+      const factor = t - idx;
+
+      const c1 = googlePalette[idx];
+      const c2 = googlePalette[nextIdx];
+
+      return {
+        r: Math.round(c1.r + (c2.r - c1.r) * factor),
+        g: Math.round(c1.g + (c2.g - c1.g) * factor),
+        b: Math.round(c1.b + (c2.b - c1.b) * factor),
+      };
+    };
 
     // Create Star Particle Nodes
     const particleCount = Math.min(Math.floor((width * height) / 18000), 75);
     const particles = [];
 
     for (let i = 0; i < particleCount; i++) {
-      const color = nodeColors[Math.floor(Math.random() * nodeColors.length)];
       particles.push({
         x: Math.random() * width,
         y: Math.random() * height,
@@ -42,12 +60,13 @@ const ConstellationBackground = () => {
         spikes: 5,
         vx: (Math.random() - 0.5) * 0.45,
         vy: (Math.random() - 0.5) * 0.45,
-        color,
+        phaseOffset: Math.random() * 6.0, // Stagger color cycle start time per star
         baseAlpha: Math.random() * 0.35 + 0.25,
         rotation: Math.random() * Math.PI,
         rotSpeed: (Math.random() - 0.5) * 0.02,
       });
     }
+
 
     // Mouse tracking for star hover proximity & shining lines
     let mouse = { x: -1000, y: -1000, active: false };
@@ -110,6 +129,7 @@ const ConstellationBackground = () => {
       // 1. Update positions and draw Star Particles & Connecting Network Lines
       for (let i = 0; i < particles.length; i++) {
         const p = particles[i];
+        p.color = getGoogleColor(time + p.phaseOffset);
 
         p.x += p.vx;
         p.y += p.vy;
@@ -161,21 +181,27 @@ const ConstellationBackground = () => {
         // 2. Connect nearby star particles with ultra-thin constellation lines
         for (let j = i + 1; j < particles.length; j++) {
           const p2 = particles[j];
+          p2.color = getGoogleColor(time + p2.phaseOffset);
           const dx = p.x - p2.x;
           const dy = p.y - p2.y;
           const dist = Math.sqrt(dx * dx + dy * dy);
 
           if (dist < connectDistance) {
             const lineAlpha = (1 - dist / connectDistance) * 0.22;
+            const avgR = Math.round((p.color.r + p2.color.r) / 2);
+            const avgG = Math.round((p.color.g + p2.color.g) / 2);
+            const avgB = Math.round((p.color.b + p2.color.b) / 2);
+
             ctx.beginPath();
             ctx.moveTo(p.x, p.y);
             ctx.lineTo(p2.x, p2.y);
-            ctx.strokeStyle = `rgba(${p.color.r}, ${p.color.g}, ${p.color.b}, ${lineAlpha})`;
+            ctx.strokeStyle = `rgba(${avgR}, ${avgG}, ${avgB}, ${lineAlpha})`;
             ctx.lineWidth = 0.6;
             ctx.stroke();
           }
         }
       }
+
 
       // Draw shining star cursor glow point
       if (mouse.active) {

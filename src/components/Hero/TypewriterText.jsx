@@ -4,16 +4,18 @@ const FULL_TEXT = "Java Full Stack Developer | Java Backend Developer | Spring B
 
 
 
-const TypewriterText = () => {
+const TypewriterText = ({ startTyping = false }) => {
   const [displayedText, setDisplayedText] = useState('');
   const [isComplete, setIsComplete] = useState(false);
 
   useEffect(() => {
+    if (!startTyping) return;
+
     let currentIndex = 0;
     setDisplayedText('');
     setIsComplete(false);
 
-    // Initial brief delay before typing starts on page refresh
+    // Start typing right after preloader finishes
     const startTimeout = setTimeout(() => {
       const interval = setInterval(() => {
         if (currentIndex < FULL_TEXT.length) {
@@ -23,13 +25,14 @@ const TypewriterText = () => {
           setIsComplete(true);
           clearInterval(interval);
         }
-      }, 40); // Smooth 40ms per character typing speed
+      }, 35); // Smooth character typing speed
 
       return () => clearInterval(interval);
-    }, 300);
+    }, 200);
 
     return () => clearTimeout(startTimeout);
-  }, []);
+  }, [startTyping]);
+
 
   return (
     <h2 className="font-['Hanken_Grotesk'] text-2xl sm:text-3xl font-bold leading-snug relative min-h-[4rem] sm:min-h-[4.5rem]">

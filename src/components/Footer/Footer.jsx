@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa6';
+import BrandLogo from '../Common/BrandLogo';
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -16,9 +17,12 @@ const Footer = () => {
           
           {/* Column 1: Branding & Intro */}
           <div className="space-y-4">
-            <div className="font-['Hanken_Grotesk'] text-2xl font-extrabold tracking-tight google-text-motion">
-              ASHIF.DEV
-            </div>
+            <a href="#home" className="flex items-center gap-3 group font-['Hanken_Grotesk'] text-2xl font-extrabold tracking-tight w-fit">
+              <BrandLogo className="w-8 h-8 group-hover:scale-110 group-hover:rotate-12 transition-transform duration-300" />
+              <span className="google-text-motion">ASHIF.DEV</span>
+            </a>
+
+
             <p className="font-['Inter'] text-sm text-gray-400 leading-relaxed">
               Crafting high-performance digital experiences with Java, Spring Boot, and modern web technologies.
             </p>

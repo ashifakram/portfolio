@@ -70,7 +70,7 @@ const processSteps = [
 const Skills = () => {
   return (
     <div id="skills" className="space-y-16 py-12 max-w-[1200px] mx-auto px-6">
-      
+
       {/* Quick Stats Grid */}
       <motion.section
         initial={{ opacity: 0, y: 30 }}
@@ -110,7 +110,7 @@ const Skills = () => {
         </h2>
 
         <div className="grid grid-cols-12 gap-6">
-          
+
           {/* Backend Stack Card */}
           <div className="col-span-12 md:col-span-8 glass-card p-8 rounded-3xl border border-white/10">
             <h3 className="font-['Hanken_Grotesk'] text-2xl font-semibold mb-6 text-white">Backend Excellence</h3>
@@ -118,7 +118,7 @@ const Skills = () => {
               {backendStack.map((tech) => (
                 <span
                   key={tech.name}
-                  className="group px-4 py-2.5 bg-[#6750a4]/20 border border-[#6750a4]/30 rounded-full font-['Geist_Mono'] text-xs text-[#e0d2ff] font-medium flex items-center gap-2.5 hover:bg-[#6750a4]/40 hover:scale-105 hover:border-[#cfbcff]/60 hover:shadow-[0_0_15px_rgba(207,188,255,0.3)] transition-all duration-300 cursor-default"
+                  className="skill-pill-magnetic group px-4 py-2.5 bg-[#6750a4]/20 border border-[#6750a4]/30 rounded-full font-['Geist_Mono'] text-xs text-[#e0d2ff] font-medium flex items-center gap-2.5 hover:bg-[#6750a4]/40 cursor-default"
                 >
                   <span className="flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300">{tech.icon}</span>
                   {tech.name}
@@ -134,7 +134,7 @@ const Skills = () => {
               {languages.map((lang) => (
                 <span
                   key={lang.name}
-                  className="group px-4 py-2.5 bg-white/5 border border-white/10 rounded-full font-['Geist_Mono'] text-xs text-gray-200 font-medium flex items-center gap-2.5 hover:bg-white/10 hover:scale-105 hover:border-[#cfbcff]/50 hover:shadow-[0_0_15px_rgba(207,188,255,0.2)] transition-all duration-300 cursor-default"
+                  className="skill-pill-magnetic group px-4 py-2.5 bg-white/5 border border-white/10 rounded-full font-['Geist_Mono'] text-xs text-gray-200 font-medium flex items-center gap-2.5 hover:bg-white/10 cursor-default"
                 >
                   <span className="flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300">{lang.icon}</span>
                   {lang.name}
@@ -145,12 +145,13 @@ const Skills = () => {
 
           {/* Databases Card */}
           <div className="col-span-12 md:col-span-4 glass-card p-8 rounded-3xl border border-white/10">
-            <h3 className="font-['Hanken_Grotesk'] text-2xl font-semibold mb-6 text-white">Data Management</h3>
+            <h3 className="font-['Hanken_Grotesk'] text-2xl font-semibold mb-6 text-white">Databases & Caching</h3>
+
             <div className="flex flex-wrap gap-3">
               {databases.map((db) => (
                 <span
                   key={db.name}
-                  className="group px-4 py-2 bg-white/5 border border-white/10 rounded-xl font-['Geist_Mono'] text-xs text-gray-300 flex items-center gap-2.5 hover:bg-white/10 hover:scale-105 hover:border-[#cfbcff]/50 hover:shadow-[0_0_15px_rgba(207,188,255,0.2)] transition-all duration-300 cursor-default"
+                  className="skill-pill-magnetic group px-4 py-2 bg-white/5 border border-white/10 rounded-xl font-['Geist_Mono'] text-xs text-gray-300 flex items-center gap-2.5 hover:bg-white/10 cursor-default"
                 >
                   <span className="flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300">{db.icon}</span>
                   {db.name}
@@ -158,6 +159,7 @@ const Skills = () => {
               ))}
             </div>
           </div>
+
 
           {/* Concepts & Tools */}
           <div className="col-span-12 md:col-span-8 glass-card p-8 rounded-3xl border border-white/10">
@@ -191,11 +193,10 @@ const Skills = () => {
           {processSteps.map((step) => (
             <div
               key={step.step}
-              className={`p-4 rounded-2xl border text-center transition-all ${
-                step.active
+              className={`p-4 rounded-2xl border text-center transition-all ${step.active
                   ? 'bg-[#6750a4] border-[#cfbcff] text-white shadow-lg shadow-[#6750a4]/30'
                   : 'bg-white/5 border-white/10 text-gray-300'
-              }`}
+                }`}
             >
               <div className="font-['Geist_Mono'] text-xs text-gray-400 mb-1">0{step.step}</div>
               <div className="font-['Hanken_Grotesk'] font-bold text-sm">{step.name}</div>

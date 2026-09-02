@@ -29,7 +29,8 @@ const About = () => {
           <div className="lg:col-span-7 flex flex-col justify-center">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#6750a4]/20 text-[#e9ddff] text-xs font-['Geist_Mono'] mb-6 border border-[#6750a4]/30 w-fit">
               <span className="w-2 h-2 rounded-full bg-[#6750a4] animate-pulse" />
-              Available for Full Stack Opportunities
+              Available for Java Backend & Full Stack Opportunities
+
             </div>
 
             <h2 className="font-['Hanken_Grotesk'] text-4xl sm:text-6xl font-extrabold text-[#e9ddff] mb-6 leading-tight">
