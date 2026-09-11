@@ -63,7 +63,7 @@ const Hero = ({ startTyping = false }) => {
             className="flex flex-wrap gap-4 pt-2"
           >
             <a
-              href="/Ashif_Akram_Resume.pdf"
+              href="./Ashif_Akram_Resume.pdf"
               download="Ashif_Akram_Resume.pdf"
               aria-label="Download Ashif Akram Resume (PDF)"
               className="btn-modern-primary flex items-center gap-2 px-8 py-4 rounded-2xl font-semibold transition-all group"

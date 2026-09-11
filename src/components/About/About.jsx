@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import ashifImg from '../../assets/ashif_img.jpg';
 
 const techPills = [
   { name: 'Spring Boot', bg: 'bg-amber-500/10', border: 'border-amber-500/30', text: 'text-[#fde68a]' },
@@ -70,7 +71,7 @@ const About = () => {
                 <img
                   className="w-full aspect-square object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100"
                   alt="Ashif Akram - Software Engineer"
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1000&auto=format&fit=crop"
+                  src={ashifImg}
                   loading="eager"
                   decoding="async"
                   fetchPriority="high"

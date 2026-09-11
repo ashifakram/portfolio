@@ -97,7 +97,7 @@ const Navbar = () => {
             </div>
 
             <a
-              href="/Ashif_Akram_Resume.pdf"
+              href="./Ashif_Akram_Resume.pdf"
               download="Ashif_Akram_Resume.pdf"
               aria-label="Download Resume PDF"
               className="btn-modern-primary px-6 py-2.5 rounded-full font-['Inter'] font-semibold text-sm transition-all"
