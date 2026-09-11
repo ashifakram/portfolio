@@ -1,8 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="64" height="64">
+  <!-- Dark circle backing for crisp browser tab contrast -->
+  <circle cx="50" cy="50" r="48" fill="#09090b" stroke="#f59e0b" stroke-width="2"/>
   <!-- Outer Hexagon Frame -->
-  <polygon points="50 5, 90 27.5, 90 72.5, 50 95, 10 72.5, 10 27.5" fill="none" stroke="url(#fav-stroke)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <polygon points="50 12, 85 31, 85 69, 50 88, 15 69, 15 31" fill="none" stroke="url(#fav-stroke)" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
   <!-- Inner Monogram AA Stroke -->
-  <path d="M 32 70 L 50 25 L 68 70 M 39 53 L 61 53" fill="none" stroke="url(#fav-monogram)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 34 68 L 50 28 L 66 68 M 40 53 L 60 53" fill="none" stroke="url(#fav-monogram)" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
   <defs>
     <linearGradient id="fav-stroke" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#4285F4" />
@@ -11,9 +13,9 @@
       <stop offset="100%" stop-color="#34A853" />
     </linearGradient>
     <linearGradient id="fav-monogram" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#6750a4" />
-      <stop offset="50%" stop-color="#8b5cf6" />
-      <stop offset="100%" stop-color="#e7c365" />
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="50%" stop-color="#fde68a" />
+      <stop offset="100%" stop-color="#f59e0b" />
     </linearGradient>
   </defs>
 </svg>
