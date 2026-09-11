@@ -3,13 +3,14 @@
   "short_name": "Ashif.Dev",
   "icons": [
     {
-      "src": "/favicon.svg",
+      "src": "favicon.svg",
       "sizes": "any",
-      "type": "image/svg+xml"
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
     }
   ],
-  "start_url": "/portfolio/",
+  "start_url": "./",
   "display": "standalone",
   "background_color": "#09090b",
-  "theme_color": "#6750a4"
+  "theme_color": "#f59e0b"
 }

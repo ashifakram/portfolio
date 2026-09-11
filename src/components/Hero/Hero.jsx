@@ -17,8 +17,8 @@ const Hero = ({ startTyping = false }) => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="flex flex-wrap items-center gap-3"
           >
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#6750a4]/20 text-[#e0d2ff] border border-[#6750a4]/30 font-['Geist_Mono'] text-xs uppercase tracking-widest font-medium">
-              <span className="w-2 h-2 rounded-full bg-[#6750a4] animate-pulse" />
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/15 text-[#fde68a] border border-amber-500/30 font-['Geist_Mono'] text-xs uppercase tracking-widest font-medium shadow-[0_0_15px_rgba(245,158,11,0.25)]">
+              <span className="w-2 h-2 rounded-full bg-[#f59e0b] animate-pulse" />
               Available for Opportunities
             </span>
             <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#e7c365]/10 text-[#e7c365] border border-[#e7c365]/20 font-['Geist_Mono'] text-xs font-medium">
@@ -123,29 +123,25 @@ const Hero = ({ startTyping = false }) => {
           className="lg:col-span-5 grid grid-cols-2 gap-4"
         >
           {/* Card 1: Core Tech */}
-          <div className="col-span-2 glass-card p-6 sm:p-8 rounded-2xl flex flex-col gap-4 overflow-hidden relative group">
-            <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity pointer-events-none">
-              <span className="material-symbols-outlined text-[120px] text-[#cfbcff]" aria-hidden="true">cloud_done</span>
+          <div className="col-span-2 glass-card p-6 sm:p-8 rounded-2xl flex flex-col gap-4 overflow-hidden relative group hover:border-amber-500/30 transition-colors">
+            <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-25 transition-opacity pointer-events-none">
+              <span className="material-symbols-outlined text-[120px] text-[#fde68a]" aria-hidden="true">cloud_done</span>
             </div>
-            <span className="text-[#cfbcff] font-['Geist_Mono'] text-xs font-medium tracking-wider">
+            <span className="text-[#fde68a] font-['Geist_Mono'] text-xs font-medium tracking-wider">
               CORE TECH
             </span>
             <h3 className="font-['Hanken_Grotesk'] text-2xl font-semibold text-white">
               Full Stack Reliability
             </h3>
             <div className="flex flex-wrap gap-2 pt-2">
-              <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-xs font-['Geist_Mono'] text-gray-300">
-                Java
-              </span>
-              <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-xs font-['Geist_Mono'] text-gray-300">
-                Spring Boot
-              </span>
-              <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-xs font-['Geist_Mono'] text-gray-300">
-                MySQL
-              </span>
-              <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-xs font-['Geist_Mono'] text-gray-300">
-                React
-              </span>
+              {['Java', 'Spring Boot', 'MySQL', 'React'].map((tech) => (
+                <span
+                  key={tech}
+                  className="skill-pill-magnetic px-3 py-1 bg-white/5 border border-white/10 hover:border-amber-500/40 hover:bg-amber-500/20 hover:text-[#fde68a] hover:shadow-[0_0_12px_rgba(245,158,11,0.25)] rounded-lg text-xs font-['Geist_Mono'] text-gray-300 transition-all duration-300 cursor-default"
+                >
+                  {tech}
+                </span>
+              ))}
             </div>
           </div>
 

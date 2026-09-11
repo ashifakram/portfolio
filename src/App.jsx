@@ -69,7 +69,7 @@ function App() {
         <meta name="twitter:image" content="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1000&auto=format&fit=crop" />
       </Helmet>
 
-      <div className="relative min-h-screen bg-[#09090b] text-gray-100 selection:bg-[#6750a4] selection:text-white font-['Inter']">
+      <div className="relative min-h-screen bg-[#09090b] text-gray-100 selection:bg-[#f59e0b] selection:text-black font-['Inter']">
         <Preloader onComplete={() => setIsPreloaderComplete(true)} />
         <ShaderBackground />
         <Navbar />

@@ -39,8 +39,8 @@ const Achievements = () => {
         className="grid grid-cols-1 md:grid-cols-3 gap-6"
       >
         {featureCards.map((card, i) => (
-          <div key={i} className="glass-card p-8 rounded-3xl border border-white/10">
-            <span className="material-symbols-outlined text-[#cfbcff] text-3xl mb-4 block">
+          <div key={i} className="glass-card p-8 rounded-3xl border border-white/10 hover:border-amber-500/30 transition-colors">
+            <span className="material-symbols-outlined text-[#f59e0b] text-3xl mb-4 block">
               {card.icon}
             </span>
             <h4 className="font-['Hanken_Grotesk'] text-xl font-bold text-white mb-2">
@@ -62,8 +62,8 @@ const Achievements = () => {
         className="grid grid-cols-2 md:grid-cols-4 gap-6"
       >
         {metricBadges.map((badge, i) => (
-          <div key={i} className="bg-[#6750a4]/10 p-6 rounded-2xl border border-[#6750a4]/20 text-center">
-            <div className="font-['Hanken_Grotesk'] text-3xl sm:text-4xl font-bold text-[#cfbcff] mb-1">
+          <div key={i} className="bg-amber-500/10 p-6 rounded-2xl border border-amber-500/25 text-center">
+            <div className="font-['Hanken_Grotesk'] text-3xl sm:text-4xl font-bold text-[#fde68a] mb-1">
               {badge.val}
             </div>
             <div className="font-['Geist_Mono'] text-xs text-gray-300 uppercase tracking-wider">

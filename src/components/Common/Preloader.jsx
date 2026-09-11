@@ -63,14 +63,14 @@ export const Preloader = ({ onComplete }) => {
             className="relative z-20 w-full h-full flex flex-col items-center justify-center"
           >
             {/* Ambient Background Glow */}
-            <div className="absolute w-[500px] h-[500px] bg-[#6750a4]/15 rounded-full blur-[140px] pointer-events-none" />
-            <div className="absolute w-[300px] h-[300px] bg-[#e7c365]/10 rounded-full blur-[100px] pointer-events-none" />
+            <div className="absolute w-[500px] h-[500px] bg-amber-500/15 rounded-full blur-[140px] pointer-events-none" />
+            <div className="absolute w-[300px] h-[300px] bg-rose-500/10 rounded-full blur-[100px] pointer-events-none" />
 
             {/* Stable Hexagon & AA Monogram SVG */}
             <div className="relative w-36 h-36 sm:w-44 sm:h-44 flex items-center justify-center mb-8">
               <svg
                 viewBox="0 0 100 100"
-                className="w-full h-full drop-shadow-[0_0_25px_rgba(207,188,255,0.75)]"
+                className="w-full h-full drop-shadow-[0_0_25px_rgba(245,158,11,0.7)]"
               >
                 {/* Outer Hexagon Frame */}
                 <motion.polygon
@@ -108,8 +108,8 @@ export const Preloader = ({ onComplete }) => {
                   </linearGradient>
                   <linearGradient id="cinema-monogram-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
                     <stop offset="0%" stopColor="#ffffff" />
-                    <stop offset="50%" stopColor="#cfbcff" />
-                    <stop offset="100%" stopColor="#e7c365" />
+                    <stop offset="50%" stopColor="#fde68a" />
+                    <stop offset="100%" stopColor="#f59e0b" />
                   </linearGradient>
                 </defs>
               </svg>
@@ -138,7 +138,7 @@ export const Preloader = ({ onComplete }) => {
                 />
               </div>
 
-              <span className="font-['Geist_Mono'] text-xs font-bold text-[#cfbcff] mt-1 tracking-wider">
+              <span className="font-['Geist_Mono'] text-xs font-bold text-[#fde68a] mt-1 tracking-wider">
                 {progress}%
               </span>
             </div>

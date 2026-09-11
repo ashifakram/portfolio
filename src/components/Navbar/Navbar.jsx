@@ -65,12 +65,13 @@ const Navbar = () => {
                   aria-current={isCurrent ? 'page' : undefined}
                   className={`font-['Inter'] text-sm transition-colors duration-300 py-1 ${
                     isCurrent
-                      ? 'text-[#e9ddff] font-bold border-b-2 border-[#6750a4]'
-                      : 'text-gray-400 hover:text-[#e9ddff]'
+                      ? 'text-[#fef08a] font-bold border-b-2 border-[#f59e0b] drop-shadow-[0_0_8px_rgba(245,158,11,0.6)]'
+                      : 'text-gray-400 hover:text-[#fef08a]'
                   }`}
                 >
                   {item.label}
                 </a>
+
               );
             })}
           </div>

@@ -21,13 +21,13 @@ const StarfieldBackground = () => {
 
     window.addEventListener('resize', handleResize);
 
-    // Color palette for cosmic stars & planets
+    // Color palette for cosmic stars & planets (Sunset Aurora & Amber Gold)
     const colors = [
-      { r: 207, g: 188, b: 255, name: 'lavender' }, // #cfbcff
-      { r: 231, g: 195, b: 101, name: 'gold' },     // #e7c365
-      { r: 103, g: 80,  b: 164, name: 'purple' },   // #6750a4
-      { r: 66,  g: 133, b: 244, name: 'blue' },     // #4285F4
-      { r: 255, g: 255, b: 255, name: 'white' },    // Pure Starlight
+      { r: 245, g: 158, b: 11,  name: 'amber' },   // #f59e0b
+      { r: 244, g: 63,  b: 94,  name: 'rose' },    // #f43f5e
+      { r: 253, g: 230, b: 138, name: 'gold' },    // #fde68a
+      { r: 236, g: 72,  b: 153, name: 'pink' },    // #ec4899
+      { r: 255, g: 255, b: 255, name: 'white' },   // Pure Starlight
     ];
 
     // 1. Generate Stars (80-100 twinkling celestial stars)

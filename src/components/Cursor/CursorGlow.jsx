@@ -37,11 +37,11 @@ const CursorGlow = () => {
           width: '400px',
           height: '400px',
           borderRadius: '50%',
-          background: 'radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, rgba(168, 85, 247, 0.08) 40%, rgba(0, 0, 0, 0) 70%)',
+          background: 'radial-gradient(circle, rgba(245, 158, 11, 0.12) 0%, rgba(251, 146, 60, 0.05) 40%, rgba(0, 0, 0, 0) 70%)',
         }}
       />
       <motion.div
-        className="pointer-events-none fixed z-40 h-3 w-3 rounded-full bg-indigo-400 opacity-70 blur-[1px]"
+        className="pointer-events-none fixed z-40 h-3 w-3 rounded-full bg-amber-400 opacity-60 blur-[1px]"
         animate={{
           x: mousePosition.x - 6,
           y: mousePosition.y - 6,

@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 
-export const SpotlightCard = ({ children, className = '', spotlightColor = 'rgba(207, 188, 255, 0.15)', ...props }) => {
+export const SpotlightCard = ({ children, className = '', spotlightColor = 'rgba(245, 158, 11, 0.15)', ...props }) => {
   const divRef = useRef(null);
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [opacity, setOpacity] = useState(0);
@@ -25,7 +25,7 @@ export const SpotlightCard = ({ children, className = '', spotlightColor = 'rgba
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className={`relative overflow-hidden rounded-3xl border border-white/10 glass-card transition-all duration-300 hover:border-[#cfbcff]/40 hover:shadow-[0_10px_30px_rgba(103,80,164,0.25)] ${className}`}
+      className={`relative overflow-hidden rounded-3xl border border-white/10 glass-card transition-all duration-300 hover:border-amber-500/40 hover:shadow-[0_10px_30px_rgba(245,158,11,0.2)] ${className}`}
       {...props}
     >
       {/* Cursor tracking spotlight gradient background */}

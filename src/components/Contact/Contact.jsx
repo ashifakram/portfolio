@@ -56,8 +56,8 @@ const Contact = () => {
     <section id="contact" className="py-16 max-w-[1200px] mx-auto px-6 relative">
       
       {/* Background Glow Blobs */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#6750a4]/15 blur-[120px] rounded-full pointer-events-none -z-10" />
-      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#63597c]/15 blur-[120px] rounded-full pointer-events-none -z-10" />
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-amber-500/10 blur-[120px] rounded-full pointer-events-none -z-10" />
+      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-rose-500/10 blur-[120px] rounded-full pointer-events-none -z-10" />
 
       {/* Hero Header */}
       <motion.div
@@ -67,7 +67,7 @@ const Contact = () => {
         transition={{ duration: 0.8 }}
         className="mb-16 text-center lg:text-left"
       >
-        <span className="font-['Geist_Mono'] text-xs uppercase tracking-[0.2em] text-[#cfbcff] mb-4 block font-medium">
+        <span className="font-['Geist_Mono'] text-xs uppercase tracking-[0.2em] text-[#fde68a] mb-4 block font-medium">
           Get in Touch
         </span>
         <h2 className="font-['Hanken_Grotesk'] text-4xl sm:text-6xl font-extrabold text-white leading-tight mb-4">
@@ -92,39 +92,39 @@ const Contact = () => {
         <div className="flex flex-col space-y-6">
           <div className="space-y-4">
             {/* Location */}
-            <div className="glass-card p-5 rounded-2xl flex items-center gap-4 group border border-white/10 hover:border-[#cfbcff]/40 transition-all">
-              <div className="w-12 h-12 rounded-full bg-[#6750a4]/20 border border-[#6750a4]/30 flex items-center justify-center group-hover:bg-[#6750a4] transition-colors">
-                <span className="material-symbols-outlined text-[#cfbcff] group-hover:text-white text-2xl">location_on</span>
+            <div className="glass-card p-5 rounded-2xl flex items-center gap-4 group border border-white/10 hover:border-amber-400/50 hover:shadow-[0_8px_25px_rgba(245,158,11,0.25)] transition-all">
+              <div className="w-12 h-12 rounded-full bg-amber-500/20 border border-amber-500/30 flex items-center justify-center group-hover:bg-amber-500 transition-colors">
+                <span className="material-symbols-outlined text-[#fde68a] group-hover:text-black text-2xl">location_on</span>
               </div>
               <div>
                 <p className="font-['Geist_Mono'] text-xs text-gray-400 uppercase">Location Availability</p>
                 <p className="font-['Inter'] text-base font-semibold text-white">Bengaluru, KA, India</p>
-                <p className="font-['Geist_Mono'] text-xs text-[#e7c365] mt-1 font-medium">Open to: Bengaluru, Hyderabad, Pune & Mumbai</p>
+                <p className="font-['Geist_Mono'] text-xs text-[#f59e0b] mt-1 font-medium">Open to: Bengaluru, Hyderabad, Pune & Mumbai</p>
               </div>
 
             </div>
 
             {/* Email */}
-            <div className="glass-card p-5 rounded-2xl flex items-center gap-4 group border border-white/10 hover:border-[#cfbcff]/40 transition-all">
-              <div className="w-12 h-12 rounded-full bg-[#6750a4]/20 border border-[#6750a4]/30 flex items-center justify-center group-hover:bg-[#6750a4] transition-colors">
-                <span className="material-symbols-outlined text-[#cfbcff] group-hover:text-white text-2xl">mail</span>
+            <div className="glass-card p-5 rounded-2xl flex items-center gap-4 group border border-white/10 hover:border-amber-400/50 hover:shadow-[0_8px_25px_rgba(245,158,11,0.25)] transition-all">
+              <div className="w-12 h-12 rounded-full bg-amber-500/20 border border-amber-500/30 flex items-center justify-center group-hover:bg-amber-500 transition-colors">
+                <span className="material-symbols-outlined text-[#fde68a] group-hover:text-black text-2xl">mail</span>
               </div>
               <div>
                 <p className="font-['Geist_Mono'] text-xs text-gray-400">Email</p>
-                <a href="mailto:ashifakram1999@gmail.com" className="font-['Inter'] text-base font-semibold text-[#e0d2ff] hover:text-white transition-colors">
+                <a href="mailto:ashifakram1999@gmail.com" className="font-['Inter'] text-base font-semibold text-[#fde68a] hover:text-white transition-colors">
                   ashifakram1999@gmail.com
                 </a>
               </div>
             </div>
 
             {/* Phone */}
-            <div className="glass-card p-5 rounded-2xl flex items-center gap-4 group border border-white/10 hover:border-[#cfbcff]/40 transition-all">
-              <div className="w-12 h-12 rounded-full bg-[#6750a4]/20 border border-[#6750a4]/30 flex items-center justify-center group-hover:bg-[#6750a4] transition-colors">
-                <span className="material-symbols-outlined text-[#cfbcff] group-hover:text-white text-2xl">call</span>
+            <div className="glass-card p-5 rounded-2xl flex items-center gap-4 group border border-white/10 hover:border-amber-400/50 hover:shadow-[0_8px_25px_rgba(245,158,11,0.25)] transition-all">
+              <div className="w-12 h-12 rounded-full bg-amber-500/20 border border-amber-500/30 flex items-center justify-center group-hover:bg-amber-500 transition-colors">
+                <span className="material-symbols-outlined text-[#fde68a] group-hover:text-black text-2xl">call</span>
               </div>
               <div>
                 <p className="font-['Geist_Mono'] text-xs text-gray-400">Phone</p>
-                <a href="tel:+917663887024" className="font-['Inter'] text-base font-semibold text-[#e0d2ff] hover:text-white transition-colors">
+                <a href="tel:+917663887024" className="font-['Inter'] text-base font-semibold text-[#fde68a] hover:text-white transition-colors">
                   +91 7663887024
                 </a>
               </div>
@@ -157,7 +157,7 @@ const Contact = () => {
         {/* Right Column: Form Container with subtle, micro 3D movement only */}
         <Tilt3DCard intensity={3} scale={1.005} glow={false} className="rounded-3xl">
           <div className="glass-card p-8 sm:p-10 rounded-3xl relative overflow-hidden border border-white/10">
-            <div className="absolute -top-24 -right-24 w-48 h-48 bg-[#6750a4]/20 rounded-full blur-[80px] pointer-events-none" />
+            <div className="absolute -top-24 -right-24 w-48 h-48 bg-amber-500/15 rounded-full blur-[80px] pointer-events-none" />
 
             {formState === 'submitted' && (
               <div className="mb-6 p-4 rounded-xl bg-emerald-500/20 border border-emerald-500/30 text-emerald-300 text-sm font-['Inter'] flex items-center gap-3" role="alert">
@@ -184,7 +184,7 @@ const Contact = () => {
                     type="text"
                     placeholder="John Doe"
                     {...register("name", { required: "Full name is required" })}
-                    className="w-full bg-[#16171d]/90 border border-white/10 rounded-xl p-4 text-white placeholder-gray-500 focus:outline-none focus:border-[#cfbcff] focus:ring-1 focus:ring-[#cfbcff] transition-all font-['Inter'] text-sm"
+                    className="w-full bg-[#16171d]/90 border border-white/10 rounded-xl p-4 text-white placeholder-gray-500 focus:outline-none focus:border-amber-400 focus:ring-1 focus:ring-amber-400 transition-all font-['Inter'] text-sm"
                   />
                   {errors.name && (
                     <span className="text-xs text-rose-400 font-['Geist_Mono']">{errors.name.message}</span>
@@ -203,7 +203,7 @@ const Contact = () => {
                       required: "Email is required",
                       pattern: { value: /^\S+@\S+$/i, message: "Invalid email address" }
                     })}
-                    className="w-full bg-[#16171d]/90 border border-white/10 rounded-xl p-4 text-white placeholder-gray-500 focus:outline-none focus:border-[#cfbcff] focus:ring-1 focus:ring-[#cfbcff] transition-all font-['Inter'] text-sm"
+                    className="w-full bg-[#16171d]/90 border border-white/10 rounded-xl p-4 text-white placeholder-gray-500 focus:outline-none focus:border-amber-400 focus:ring-1 focus:ring-amber-400 transition-all font-['Inter'] text-sm"
                   />
                   {errors.email && (
                     <span className="text-xs text-rose-400 font-['Geist_Mono']">{errors.email.message}</span>
@@ -220,7 +220,7 @@ const Contact = () => {
                   type="text"
                   placeholder="Project Inquiry / Opportunity"
                   {...register("subject", { required: "Subject is required" })}
-                  className="w-full bg-[#16171d]/90 border border-white/10 rounded-xl p-4 text-white placeholder-gray-500 focus:outline-none focus:border-[#cfbcff] focus:ring-1 focus:ring-[#cfbcff] transition-all font-['Inter'] text-sm"
+                  className="w-full bg-[#16171d]/90 border border-white/10 rounded-xl p-4 text-white placeholder-gray-500 focus:outline-none focus:border-amber-400 focus:ring-1 focus:ring-amber-400 transition-all font-['Inter'] text-sm"
                 />
                 {errors.subject && (
                   <span className="text-xs text-rose-400 font-['Geist_Mono']">{errors.subject.message}</span>
@@ -236,7 +236,7 @@ const Contact = () => {
                   rows="4"
                   placeholder="Tell me about your project or technical challenge..."
                   {...register("message", { required: "Message is required" })}
-                  className="w-full bg-[#16171d]/90 border border-white/10 rounded-xl p-4 text-white placeholder-gray-500 focus:outline-none focus:border-[#cfbcff] focus:ring-1 focus:ring-[#cfbcff] transition-all font-['Inter'] text-sm resize-none"
+                  className="w-full bg-[#16171d]/90 border border-white/10 rounded-xl p-4 text-white placeholder-gray-500 focus:outline-none focus:border-amber-400 focus:ring-1 focus:ring-amber-400 transition-all font-['Inter'] text-sm resize-none"
                 />
                 {errors.message && (
                   <span className="text-xs text-rose-400 font-['Geist_Mono']">{errors.message.message}</span>

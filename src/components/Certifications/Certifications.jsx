@@ -7,32 +7,32 @@ const certsList = [
     org: 'JSpiders Institute',
     badge: 'Verified Certification',
     icon: 'terminal',
-    bg: 'bg-[#6750a4]/10',
-    color: 'text-[#cfbcff]'
+    bg: 'bg-amber-500/15',
+    color: 'text-[#fde68a]'
   },
   {
     title: 'Soft Skills',
     org: 'NPTEL (IIT Roorkee)',
     badge: 'Elite Certificate',
     icon: 'groups',
-    bg: 'bg-[#765b00]/10',
-    color: 'text-[#e7c365]'
+    bg: 'bg-amber-500/15',
+    color: 'text-[#f59e0b]'
   },
   {
     title: 'Ethics in Engineering',
     org: 'NPTEL (IIT Kharagpur)',
     badge: 'Professional Badge',
     icon: 'gavel',
-    bg: 'bg-[#63597c]/10',
-    color: 'text-[#cdc0e9]'
+    bg: 'bg-rose-500/15',
+    color: 'text-[#f43f5e]'
   },
   {
     title: 'Joy of Computing',
     org: 'NPTEL (Python Focus)',
     badge: 'Distinction',
     icon: 'hub',
-    bg: 'bg-[#6750a4]/10',
-    color: 'text-[#cfbcff]'
+    bg: 'bg-amber-500/15',
+    color: 'text-[#fde68a]'
   }
 ];
 
@@ -60,12 +60,12 @@ const whyHireMe = [
 ];
 
 const focusRoadmap = [
-  { title: 'Spring AI', sub: 'Java AI Integration', icon: 'psychology', border: 'border-l-[#6750a4]' },
-  { title: 'LangChain4j', sub: 'LLMs & AI Agents', icon: 'smart_toy', border: 'border-l-[#e7c365]' },
-  { title: 'RAG Architecture', sub: 'Vector DB & Search', icon: 'neurology', border: 'border-l-[#34A853]' },
-  { title: 'Spring Cloud', sub: 'Microservices', icon: 'cloud_done', border: 'border-l-[#4285F4]' },
-  { title: 'Kafka', sub: 'Event Streaming', icon: 'developer_board', border: 'border-l-[#e7c365]' },
-  { title: 'System Design', sub: 'Distributed Systems', icon: 'architecture', border: 'border-l-[#cfbcff]' }
+  { title: 'Spring AI', sub: 'Java AI Integration', icon: 'psychology', border: 'border-l-amber-500' },
+  { title: 'LangChain4j', sub: 'LLMs & AI Agents', icon: 'smart_toy', border: 'border-l-rose-500' },
+  { title: 'RAG Architecture', sub: 'Vector DB & Search', icon: 'neurology', border: 'border-l-amber-400' },
+  { title: 'Spring Cloud', sub: 'Microservices', icon: 'cloud_done', border: 'border-l-rose-400' },
+  { title: 'Kafka', sub: 'Event Streaming', icon: 'developer_board', border: 'border-l-amber-500' },
+  { title: 'System Design', sub: 'Distributed Systems', icon: 'architecture', border: 'border-l-rose-500' }
 ];
 
 
@@ -89,17 +89,17 @@ const Certifications = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {certsList.map((cert) => (
-            <div key={cert.title} className="glass-card p-6 rounded-2xl h-full flex flex-col justify-between border border-white/10">
+            <div key={cert.title} className="glass-card p-6 rounded-2xl h-full flex flex-col justify-between border border-white/10 group hover:border-amber-500/30 transition-colors">
               <div>
-                <div className={`w-12 h-12 ${cert.bg} rounded-xl flex items-center justify-center mb-6`}>
-                  <span className={`material-symbols-outlined ${cert.color} text-2xl`} style={{ fontVariationSettings: "'FILL' 1" }}>
+                <div className={`w-12 h-12 ${cert.bg} rounded-xl flex items-center justify-center mb-6 group-hover:bg-amber-500 transition-colors`}>
+                  <span className={`material-symbols-outlined ${cert.color} group-hover:text-black text-2xl transition-colors`} style={{ fontVariationSettings: "'FILL' 1" }}>
                     {cert.icon}
                   </span>
                 </div>
                 <h4 className="font-['Hanken_Grotesk'] text-lg font-bold text-white mb-2">{cert.title}</h4>
                 <p className="text-gray-300 font-['Inter'] text-sm mb-6">{cert.org}</p>
               </div>
-              <div className="flex items-center gap-2 text-[#cfbcff] font-['Geist_Mono'] text-xs">
+              <div className="flex items-center gap-2 text-[#fde68a] font-['Geist_Mono'] text-xs font-medium">
                 <span className="material-symbols-outlined text-sm" aria-hidden="true">verified</span> {cert.badge}
               </div>
             </div>
@@ -126,9 +126,9 @@ const Certifications = () => {
 
           <div className="w-full md:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-6">
             {whyHireMe.map((item) => (
-              <div key={item.title} className="glass-card p-8 rounded-3xl group border border-white/10">
-                <div className="w-14 h-14 bg-[#6750a4]/20 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-[#6750a4] transition-colors">
-                  <span className="material-symbols-outlined text-[#cfbcff] group-hover:text-white text-3xl">
+              <div key={item.title} className="glass-card p-8 rounded-3xl group border border-white/10 hover:border-amber-400/50 hover:shadow-[0_8px_25px_rgba(245,158,11,0.25)] transition-all">
+                <div className="w-14 h-14 bg-amber-500/20 border border-amber-500/30 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-amber-500 transition-colors">
+                  <span className="material-symbols-outlined text-[#fde68a] group-hover:text-black text-3xl transition-colors">
                     {item.icon}
                   </span>
                 </div>
@@ -153,7 +153,7 @@ const Certifications = () => {
       >
         <div className="glass-card p-8 sm:p-14 rounded-[40px] overflow-hidden relative border border-white/10">
           <div className="absolute top-0 right-0 p-8 opacity-10 hidden md:block pointer-events-none">
-            <span className="material-symbols-outlined text-[200px] text-[#cfbcff]">auto_awesome</span>
+            <span className="material-symbols-outlined text-[200px] text-[#fde68a]">auto_awesome</span>
           </div>
           <div className="relative z-10">
             <h2 className="font-['Hanken_Grotesk'] text-3xl sm:text-4xl font-bold text-white mb-4">
@@ -164,8 +164,8 @@ const Certifications = () => {
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {focusRoadmap.map((f) => (
-                <div key={f.title} className={`glass-card px-6 py-4 rounded-2xl border-l-4 ${f.border} flex items-center gap-4 border border-white/10 hover:border-white/20 transition-all`}>
-                  <span className="material-symbols-outlined text-[#cfbcff] text-2xl">{f.icon}</span>
+                <div key={f.title} className={`glass-card px-6 py-4 rounded-2xl border-l-4 ${f.border} flex items-center gap-4 border border-white/10 hover:border-amber-500/30 transition-all`}>
+                  <span className="material-symbols-outlined text-[#fde68a] text-2xl">{f.icon}</span>
                   <div>
                     <h4 className="font-['Hanken_Grotesk'] font-bold text-white text-base">{f.title}</h4>
                     <p className="text-[10px] text-gray-400 font-['Geist_Mono'] uppercase tracking-wider">{f.sub}</p>

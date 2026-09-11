@@ -10,7 +10,7 @@ const Footer = () => {
   return (
     <footer className="bg-[#09090b] border-t border-white/10 relative">
       {/* Decorative Gradient Line */}
-      <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-[#6750a4] to-transparent opacity-50" />
+      <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-[#f59e0b] to-transparent opacity-50" />
 
       <div className="max-w-[1200px] mx-auto px-6 pt-16 pb-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-16">
@@ -26,22 +26,28 @@ const Footer = () => {
             <p className="font-['Inter'] text-sm text-gray-400 leading-relaxed">
               Crafting high-performance digital experiences with Java, Spring Boot, and modern web technologies.
             </p>
-            <div className="flex gap-4 text-[#cfbcff]">
+            <div className="flex gap-3 text-[#fde68a]">
               <div className="relative group flex items-center justify-center">
-                <span className="material-symbols-outlined text-lg cursor-help" aria-label="Backend & CLI">terminal</span>
-                <span className="absolute bottom-full mb-2 hidden group-hover:flex items-center bg-[#16171d] text-[#e9ddff] text-[10px] font-['Geist_Mono'] px-2.5 py-1 rounded-lg border border-white/10 whitespace-nowrap shadow-xl z-20 pointer-events-none">
+                <div className="w-9 h-9 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-amber-500 group-hover:border-amber-400 group-hover:shadow-[0_0_15px_rgba(245,158,11,0.5)] group-hover:scale-110 transition-all duration-300 cursor-pointer">
+                  <span className="material-symbols-outlined text-lg text-[#fde68a] group-hover:text-black transition-colors duration-300" aria-label="Backend & CLI">terminal</span>
+                </div>
+                <span className="absolute bottom-full mb-2 hidden group-hover:flex items-center bg-[#16171d] text-[#fde68a] text-[10px] font-['Geist_Mono'] px-2.5 py-1 rounded-lg border border-amber-500/30 whitespace-nowrap shadow-xl z-20 pointer-events-none">
                   Backend & CLI
                 </span>
               </div>
               <div className="relative group flex items-center justify-center">
-                <span className="material-symbols-outlined text-lg cursor-help" aria-label="Clean Architecture">code</span>
-                <span className="absolute bottom-full mb-2 hidden group-hover:flex items-center bg-[#16171d] text-[#e9ddff] text-[10px] font-['Geist_Mono'] px-2.5 py-1 rounded-lg border border-white/10 whitespace-nowrap shadow-xl z-20 pointer-events-none">
+                <div className="w-9 h-9 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-amber-500 group-hover:border-amber-400 group-hover:shadow-[0_0_15px_rgba(245,158,11,0.5)] group-hover:scale-110 transition-all duration-300 cursor-pointer">
+                  <span className="material-symbols-outlined text-lg text-[#fde68a] group-hover:text-black transition-colors duration-300" aria-label="Clean Architecture">code</span>
+                </div>
+                <span className="absolute bottom-full mb-2 hidden group-hover:flex items-center bg-[#16171d] text-[#fde68a] text-[10px] font-['Geist_Mono'] px-2.5 py-1 rounded-lg border border-amber-500/30 whitespace-nowrap shadow-xl z-20 pointer-events-none">
                   Clean Architecture
                 </span>
               </div>
               <div className="relative group flex items-center justify-center">
-                <span className="material-symbols-outlined text-lg cursor-help" aria-label="Verified Experience">verified</span>
-                <span className="absolute bottom-full mb-2 hidden group-hover:flex items-center bg-[#16171d] text-[#e9ddff] text-[10px] font-['Geist_Mono'] px-2.5 py-1 rounded-lg border border-white/10 whitespace-nowrap shadow-xl z-20 pointer-events-none">
+                <div className="w-9 h-9 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-amber-500 group-hover:border-amber-400 group-hover:shadow-[0_0_15px_rgba(245,158,11,0.5)] group-hover:scale-110 transition-all duration-300 cursor-pointer">
+                  <span className="material-symbols-outlined text-lg text-[#fde68a] group-hover:text-black transition-colors duration-300" aria-label="Verified Experience">verified</span>
+                </div>
+                <span className="absolute bottom-full mb-2 hidden group-hover:flex items-center bg-[#16171d] text-[#fde68a] text-[10px] font-['Geist_Mono'] px-2.5 py-1 rounded-lg border border-amber-500/30 whitespace-nowrap shadow-xl z-20 pointer-events-none">
                   Verified Experience
                 </span>
               </div>
@@ -50,7 +56,7 @@ const Footer = () => {
 
           {/* Column 2: Navigation Links */}
           <div className="space-y-4">
-            <h4 className="font-['Geist_Mono'] text-xs font-bold uppercase tracking-widest text-[#cfbcff]">
+            <h4 className="font-['Geist_Mono'] text-xs font-bold uppercase tracking-widest text-[#fde68a]">
               Navigation
             </h4>
             <ul className="space-y-2 font-['Inter'] text-sm">
@@ -68,7 +74,7 @@ const Footer = () => {
 
           {/* Column 3: Support & Info */}
           <div className="space-y-4">
-            <h4 className="font-['Geist_Mono'] text-xs font-bold uppercase tracking-widest text-[#cfbcff]">
+            <h4 className="font-['Geist_Mono'] text-xs font-bold uppercase tracking-widest text-[#fde68a]">
               Support
             </h4>
             <ul className="space-y-2 font-['Inter'] text-sm">
@@ -89,7 +95,7 @@ const Footer = () => {
             <button
               onClick={scrollToTop}
               aria-label="Scroll back to top of page"
-              className="group flex items-center gap-2 text-white font-['Inter'] text-sm font-semibold hover:text-[#cfbcff] transition-colors"
+              className="group flex items-center gap-2 text-white font-['Inter'] text-sm font-semibold hover:text-[#fde68a] transition-colors"
             >
               Back to Top
               <span className="material-symbols-outlined bg-white/5 p-2 rounded-full group-hover:-translate-y-1 transition-transform text-base" aria-hidden="true">
@@ -129,7 +135,7 @@ const Footer = () => {
         {/* Bottom Copyright & Status */}
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left font-['Inter'] text-xs text-gray-400">
           <p>© {new Date().getFullYear()} Ashif Akram. All rights reserved.</p>
-          <div className="flex items-center gap-2 text-xs font-['Geist_Mono'] text-[#cfbcff]">
+          <div className="flex items-center gap-2 text-xs font-['Geist_Mono'] text-[#fde68a]">
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
             <span>Bengaluru, KA, India • Open for Roles</span>
           </div>

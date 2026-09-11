@@ -24,11 +24,11 @@ import { TbLayersIntersect, TbApi, TbCertificate, TbLayoutGrid } from 'react-ico
 const backendStack = [
   { name: 'Spring Boot', icon: <SiSpringboot className="text-[#6DB33F] text-base" /> },
   { name: 'Spring Security', icon: <SiSpringsecurity className="text-[#6DB33F] text-base" /> },
-  { name: 'Microservices', icon: <TbLayoutGrid className="text-[#cfbcff] text-base" /> },
+  { name: 'Microservices', icon: <TbLayoutGrid className="text-[#fde68a] text-base" /> },
   { name: 'Apache Kafka', icon: <SiApachekafka className="text-[#E0234E] text-base" /> },
   { name: 'Hibernate/JPA', icon: <SiHibernate className="text-[#59666C] dark:text-[#b0bec5] text-base" /> },
-  { name: 'REST APIs', icon: <TbApi className="text-[#e7c365] text-base" /> },
-  { name: 'JWT Auth', icon: <TbCertificate className="text-[#e7c365] text-base" /> },
+  { name: 'REST APIs', icon: <TbApi className="text-[#f59e0b] text-base" /> },
+  { name: 'JWT Auth', icon: <TbCertificate className="text-[#f59e0b] text-base" /> },
 ];
 
 const languages = [
@@ -80,19 +80,19 @@ const Skills = () => {
         className="grid grid-cols-2 md:grid-cols-4 gap-6"
       >
         <div className="glass-card p-6 sm:p-8 rounded-3xl text-center border border-white/10">
-          <div className="font-['Hanken_Grotesk'] text-4xl sm:text-5xl font-bold text-[#e9ddff] mb-1">1.5+</div>
+          <div className="font-['Hanken_Grotesk'] text-4xl sm:text-5xl font-bold text-[#fde68a] mb-1">1.5+</div>
           <div className="font-['Geist_Mono'] text-xs uppercase text-gray-400">Years Exp.</div>
         </div>
         <div className="glass-card p-6 sm:p-8 rounded-3xl text-center border border-white/10">
-          <div className="font-['Hanken_Grotesk'] text-4xl sm:text-5xl font-bold text-[#e9ddff] mb-1">1</div>
+          <div className="font-['Hanken_Grotesk'] text-4xl sm:text-5xl font-bold text-[#fde68a] mb-1">1</div>
           <div className="font-['Geist_Mono'] text-xs uppercase text-gray-400">Current Co.</div>
         </div>
         <div className="glass-card p-6 sm:p-8 rounded-3xl text-center border border-white/10">
-          <div className="font-['Hanken_Grotesk'] text-4xl sm:text-5xl font-bold text-[#e7c365] mb-1">50+</div>
+          <div className="font-['Hanken_Grotesk'] text-4xl sm:text-5xl font-bold text-[#f59e0b] mb-1">50+</div>
           <div className="font-['Geist_Mono'] text-xs uppercase text-gray-400">APIs Built</div>
         </div>
         <div className="glass-card p-6 sm:p-8 rounded-3xl text-center border border-white/10">
-          <div className="font-['Hanken_Grotesk'] text-4xl sm:text-5xl font-bold text-[#e9ddff] mb-1">9.23</div>
+          <div className="font-['Hanken_Grotesk'] text-4xl sm:text-5xl font-bold text-[#fde68a] mb-1">9.23</div>
           <div className="font-['Geist_Mono'] text-xs uppercase text-gray-400">CGPA (CSE)</div>
         </div>
       </motion.section>
@@ -105,7 +105,7 @@ const Skills = () => {
         transition={{ duration: 0.8, delay: 0.2 }}
       >
         <h2 className="font-['Hanken_Grotesk'] text-3xl sm:text-4xl font-bold mb-10 flex items-center gap-3 text-white">
-          <span className="material-symbols-outlined text-[#cfbcff] text-3xl">terminal</span>
+          <span className="material-symbols-outlined text-[#f59e0b] text-3xl">terminal</span>
           <span className="google-text-motion">Technical Proficiency</span>
         </h2>
 
@@ -118,7 +118,7 @@ const Skills = () => {
               {backendStack.map((tech) => (
                 <span
                   key={tech.name}
-                  className="skill-pill-magnetic group px-4 py-2.5 bg-[#6750a4]/20 border border-[#6750a4]/30 rounded-full font-['Geist_Mono'] text-xs text-[#e0d2ff] font-medium flex items-center gap-2.5 hover:bg-[#6750a4]/40 cursor-default"
+                  className="skill-pill-magnetic group px-4 py-2.5 bg-white/5 border border-white/10 rounded-full font-['Geist_Mono'] text-xs text-gray-200 font-medium flex items-center gap-2.5 hover:bg-white/10 cursor-default"
                 >
                   <span className="flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300">{tech.icon}</span>
                   {tech.name}
@@ -166,7 +166,10 @@ const Skills = () => {
             <h3 className="font-['Hanken_Grotesk'] text-2xl font-semibold mb-6 text-white">DevOps & Tools</h3>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
               {concepts.map((item) => (
-                <div key={item.name} className="group flex items-center gap-3 p-3 bg-white/5 rounded-2xl border border-white/5 hover:border-[#cfbcff]/40 hover:bg-white/10 hover:scale-[1.03] transition-all duration-300 cursor-default">
+                <div
+                  key={item.name}
+                  className="skill-pill-magnetic group flex items-center gap-3 p-3 bg-white/5 rounded-2xl border border-white/10 hover:bg-white/10 cursor-default"
+                >
                   <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300">
                     {item.icon}
                   </div>
@@ -194,11 +197,11 @@ const Skills = () => {
             <div
               key={step.step}
               className={`p-4 rounded-2xl border text-center transition-all ${step.active
-                  ? 'bg-[#6750a4] border-[#cfbcff] text-white shadow-lg shadow-[#6750a4]/30'
-                  : 'bg-white/5 border-white/10 text-gray-300'
+                ? 'bg-amber-500/10 border-amber-500/40 text-[#fde68a] shadow-[0_0_15px_rgba(245,158,11,0.15)]'
+                : 'bg-white/5 border-white/10 text-gray-300'
                 }`}
             >
-              <div className="font-['Geist_Mono'] text-xs text-gray-400 mb-1">0{step.step}</div>
+              <div className={`font-['Geist_Mono'] text-xs mb-1 ${step.active ? 'text-amber-400' : 'text-gray-400'}`}>0{step.step}</div>
               <div className="font-['Hanken_Grotesk'] font-bold text-sm">{step.name}</div>
             </div>
           ))}

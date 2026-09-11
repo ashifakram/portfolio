@@ -1,3 +1,11 @@
+// Available Images for Sahayak (All saved safely in assets/):
+// 1. Regional Classroom with Teacher & Students (Active):
+import sahayakImg from '../assets/sahayak_regional_classroom.jpg';
+// 2. Smart Board Interactive Classroom:
+// import sahayakImg from '../assets/sahayak_smart_classroom.jpg';
+// 3. AI Web App UI Dashboard:
+// import sahayakImg from '../assets/sahayak_dashboard.jpg';
+
 export const flagshipProject = {
   id: 'sahayak',
   tag: 'Google AI Hackathon • AI & Education',
@@ -7,7 +15,7 @@ export const flagshipProject = {
   tech: ['React', 'Node.js', 'Express.js', 'Firebase', 'Cloud Firestore', 'Gemini API', 'GCP APIs'],
   problem: 'Teachers spend considerable time manually drafting lesson plans and educational materials for regional classrooms.',
   solution: 'An intuitive web dashboard that generates customized lesson plans and educational content in seconds.',
-  image: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=1000&auto=format&fit=crop',
+  image: sahayakImg, // Unsplash fallback: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=1000&auto=format&fit=crop'
   contributions: [
     'Developed Node.js and Express REST APIs hosted on GCP to handle Gemini API requests asynchronously.',
     'Integrated Firebase OAuth 2.0 authentication and Cloud Firestore database for user profile and document storage.'

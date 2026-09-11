@@ -57,7 +57,7 @@ const Philosophy = () => {
         <div className="animated-border-box p-[3px] rounded-3xl">
           <div className="bg-[#09090b] rounded-[calc(1.5rem-3px)] p-8 sm:p-16 md:p-20 text-center relative overflow-hidden">
             <span
-              className="material-symbols-outlined text-[#6750a4] text-5xl sm:text-6xl mb-6 block"
+              className="material-symbols-outlined text-[#f59e0b] text-5xl sm:text-6xl mb-6 block"
               style={{ fontVariationSettings: "'FILL' 1" }}
             >
               format_quote
@@ -81,7 +81,7 @@ const Philosophy = () => {
       >
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-4">
           <div>
-            <h2 className="font-['Hanken_Grotesk'] text-3xl sm:text-5xl font-bold text-[#e9ddff] mb-2">
+            <h2 className="font-['Hanken_Grotesk'] text-3xl sm:text-5xl font-bold text-[#fde68a] mb-2">
               Core Strengths
             </h2>
             <p className="font-['Inter'] text-base text-gray-400">
@@ -95,15 +95,15 @@ const Philosophy = () => {
           {coreStrengths.map((item, i) => (
             <div
               key={i}
-              className={`glass-card p-6 rounded-2xl flex flex-col gap-4 border border-white/10 ${item.span}`}
+              className={`glass-card p-6 rounded-2xl flex flex-col gap-4 border border-white/10 group hover:border-amber-500/40 transition-all duration-300 cursor-default ${item.span}`}
             >
               <span
-                className="material-symbols-outlined text-[#cfbcff] text-2xl"
+                className="material-symbols-outlined text-[#f59e0b] group-hover:text-[#fde68a] group-hover:scale-110 transition-all duration-300 text-2xl w-fit"
                 style={{ fontVariationSettings: "'FILL' 1" }}
               >
                 {item.icon}
               </span>
-              <h3 className="font-['Hanken_Grotesk'] text-base font-bold text-white">
+              <h3 className="font-['Hanken_Grotesk'] text-base font-bold text-white group-hover:text-[#fde68a] transition-colors">
                 {item.title}
               </h3>
             </div>
@@ -119,7 +119,7 @@ const Philosophy = () => {
         transition={{ duration: 0.8, delay: 0.3 }}
       >
         <div className="glass-card p-8 sm:p-12 rounded-3xl border border-white/10 relative overflow-hidden">
-          <div className="absolute -right-20 -top-20 w-64 h-64 bg-[#6750a4]/10 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute -right-20 -top-20 w-64 h-64 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
 
           <div className="relative z-10">
             <h2 className="font-['Hanken_Grotesk'] text-3xl font-bold text-white mb-8">
@@ -129,7 +129,7 @@ const Philosophy = () => {
               {exploringChips.map((chip) => (
                 <span
                   key={chip.name}
-                  className="px-5 py-2.5 rounded-full bg-[#16171d] border border-white/10 font-['Geist_Mono'] text-xs text-gray-300 flex items-center gap-2.5 hover:bg-[#6750a4]/40 hover:border-[#cfbcff]/50 hover:text-white hover:scale-105 transition-all duration-300 cursor-default shadow-sm"
+                  className="px-5 py-2.5 rounded-full bg-[#16171d] border border-white/10 font-['Geist_Mono'] text-xs text-gray-300 flex items-center gap-2.5 hover:bg-amber-500/20 hover:border-amber-500/40 hover:text-amber-200 hover:scale-105 transition-all duration-300 cursor-default shadow-sm"
                 >
                   <span className="flex items-center justify-center">{chip.icon}</span>
                   {chip.name}

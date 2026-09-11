@@ -2,19 +2,19 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const techPills = [
-  { name: 'Spring Boot', bg: 'bg-[#e1d4fd]/10', border: 'border-[#e1d4fd]/20', text: 'text-[#e9ddff]' },
-  { name: 'Java 17+', bg: 'bg-[#6750a4]/10', border: 'border-[#6750a4]/20', text: 'text-[#e0d2ff]' },
+  { name: 'Spring Boot', bg: 'bg-amber-500/10', border: 'border-amber-500/30', text: 'text-[#fde68a]' },
+  { name: 'Java 17+', bg: 'bg-rose-500/10', border: 'border-rose-500/30', text: 'text-[#fef08a]' },
   { name: 'React', bg: 'bg-[#c9a74d]/10', border: 'border-[#c9a74d]/20', text: 'text-[#ffdf93]' },
-  { name: 'Redis', bg: 'bg-[#e1d4fd]/10', border: 'border-[#e1d4fd]/20', text: 'text-[#e9ddff]' },
-  { name: 'MySQL', bg: 'bg-[#6750a4]/10', border: 'border-[#6750a4]/20', text: 'text-[#e0d2ff]' },
+  { name: 'Redis', bg: 'bg-amber-500/10', border: 'border-amber-500/30', text: 'text-[#fde68a]' },
+  { name: 'MySQL', bg: 'bg-rose-500/10', border: 'border-rose-500/30', text: 'text-[#fef08a]' },
   { name: 'JWT Auth', bg: 'bg-[#c9a74d]/10', border: 'border-[#c9a74d]/20', text: 'text-[#ffdf93]' },
-  { name: 'Swagger', bg: 'bg-[#e1d4fd]/10', border: 'border-[#e1d4fd]/20', text: 'text-[#e9ddff]' },
+  { name: 'Swagger', bg: 'bg-amber-500/10', border: 'border-amber-500/30', text: 'text-[#fde68a]' },
 ];
 
 const About = () => {
   return (
     <div id="about" className="space-y-16 py-16">
-      
+
       {/* Hero / About Section */}
       <motion.section
         initial={{ opacity: 0, y: 30 }}
@@ -24,14 +24,14 @@ const About = () => {
         className="max-w-[1200px] mx-auto px-6"
       >
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-          
+
           {/* Left Side: Bio & Stats */}
           <div className="lg:col-span-7 flex flex-col justify-center">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#6750a4]/20 text-[#e9ddff] text-xs font-['Geist_Mono'] mb-6 border border-[#6750a4]/30 w-fit">
-              <span className="w-2 h-2 rounded-full bg-[#6750a4] animate-pulse" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/15 text-[#fde68a] text-xs font-['Geist_Mono'] mb-6 border border-amber-500/30 w-fit shadow-[0_0_15px_rgba(245,158,11,0.25)]">
+              <span className="w-2 h-2 rounded-full bg-[#f59e0b] animate-pulse" />
               Available for Java Backend & Full Stack Opportunities
-
             </div>
+
 
             <h2 className="font-['Hanken_Grotesk'] text-4xl sm:text-6xl font-extrabold text-[#e9ddff] mb-6 leading-tight">
               Bridging <span className="google-text-motion">Backend</span> Power with Frontend <span className="google-text-motion">Precision</span>.
@@ -113,7 +113,7 @@ const About = () => {
             {techPills.map((pill, idx) => (
               <span
                 key={idx}
-                className={`px-4 py-1.5 rounded-full ${pill.bg} border ${pill.border} ${pill.text} text-xs font-['Geist_Mono'] font-medium`}
+                className={`skill-pill-magnetic cursor-default px-4 py-1.5 rounded-full ${pill.bg} border ${pill.border} ${pill.text} text-xs font-['Geist_Mono'] font-medium`}
               >
                 {pill.name}
               </span>

@@ -21,13 +21,13 @@ const FloatingBubbles = () => {
 
     window.addEventListener('resize', handleResize);
 
-    // Color palette matching Google & Material 3 Dark theme
+    // Color palette matching Option 3 Sunset Aurora theme
     const colors = [
-      { r: 103, g: 80, b: 164 },  // #6750a4 (Deep Purple)
-      { r: 207, g: 188, b: 255 }, // #cfbcff (Lavender)
-      { r: 231, g: 195, b: 101 }, // #e7c365 (Warm Gold)
-      { r: 66,  g: 133, b: 244 }, // #4285F4 (Google Blue)
-      { r: 54,  g: 168, b: 83 },  // #34A853 (Emerald Green)
+      { r: 245, g: 158, b: 11 },   // #f59e0b (Amber Gold)
+      { r: 244, g: 63,  b: 94 },   // #f43f5e (Rose Flame)
+      { r: 253, g: 230, b: 138 },  // #fde68a (Light Gold)
+      { r: 236, g: 72,  b: 153 },  // #ec4899 (Pink Fuchsia)
+      { r: 251, g: 146, b: 60 },   // #fb923c (Warm Orange)
     ];
 
     // Create 45 floating glass bubbles with higher density on sides

@@ -18,7 +18,7 @@ const sahayakFlow = [
 const Projects = () => {
   return (
     <div id="projects" className="py-12 max-w-[1200px] mx-auto px-6 space-y-20">
-      
+
       {/* Hero Section / Sahayak Showcase */}
       <motion.section
         initial={{ opacity: 0, y: 30 }}
@@ -27,7 +27,7 @@ const Projects = () => {
         transition={{ duration: 0.8 }}
       >
         <div className="mb-12">
-          <span className="font-['Geist_Mono'] text-xs uppercase tracking-widest text-[#cfbcff] mb-4 block font-medium">
+          <span className="font-['Geist_Mono'] text-xs uppercase tracking-widest text-[#fde68a] mb-4 block font-medium">
             {flagshipProject.tag}
           </span>
           <h2 className="font-['Hanken_Grotesk'] text-4xl sm:text-6xl font-extrabold google-text-motion mb-6">
@@ -63,7 +63,7 @@ const Projects = () => {
                 {flagshipProject.tech.map((t) => (
                   <span
                     key={t}
-                    className="font-['Geist_Mono'] text-xs px-3.5 py-1.5 bg-[#6750a4]/20 text-[#e0d2ff] border border-[#6750a4]/30 rounded-full font-medium"
+                    className="skill-pill-magnetic font-['Geist_Mono'] text-xs px-3.5 py-1.5 bg-amber-500/15 text-[#fde68a] border border-amber-500/30 rounded-full font-medium cursor-default"
                   >
                     {t}
                   </span>
@@ -72,25 +72,25 @@ const Projects = () => {
             </div>
 
             <div className="space-y-6">
-              <div className="flex gap-4">
-                <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-rose-500/20 border border-rose-500/30 flex items-center justify-center">
-                  <span className="material-symbols-outlined text-rose-400 text-2xl">warning</span>
+              <div className="group/problem flex gap-4 cursor-default transition-colors">
+                <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-rose-500/20 border border-rose-500/30 flex items-center justify-center group-hover/problem:bg-rose-500 group-hover/problem:border-rose-400 group-hover/problem:shadow-[0_0_15px_rgba(244,63,94,0.5)] transition-all duration-300">
+                  <span className="material-symbols-outlined text-rose-400 group-hover/problem:text-black text-2xl transition-colors duration-300">warning</span>
                 </div>
                 <div>
-                  <h4 className="font-['Hanken_Grotesk'] font-bold text-lg text-white mb-1">Problem Statement</h4>
-                  <p className="font-['Inter'] text-xs sm:text-sm text-gray-300 leading-relaxed">
+                  <h4 className="font-['Hanken_Grotesk'] font-bold text-lg text-white group-hover/problem:text-rose-200 transition-colors mb-1">Problem Statement</h4>
+                  <p className="font-['Inter'] text-xs sm:text-sm text-gray-300 group-hover/problem:text-gray-200 transition-colors leading-relaxed">
                     {flagshipProject.problem}
                   </p>
                 </div>
               </div>
 
-              <div className="flex gap-4">
-                <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-[#6750a4]/20 border border-[#6750a4]/30 flex items-center justify-center">
-                  <span className="material-symbols-outlined text-[#cfbcff] text-2xl">verified</span>
+              <div className="group/solution flex gap-4 cursor-default transition-colors">
+                <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-amber-500/15 border border-amber-500/30 flex items-center justify-center group-hover/solution:bg-amber-500 group-hover/solution:border-amber-400 group-hover/solution:shadow-[0_0_15px_rgba(245,158,11,0.5)] transition-all duration-300">
+                  <span className="material-symbols-outlined text-[#f59e0b] group-hover/solution:text-black text-2xl transition-colors duration-300">verified</span>
                 </div>
                 <div>
-                  <h4 className="font-['Hanken_Grotesk'] font-bold text-lg text-white mb-1">Our Solution</h4>
-                  <p className="font-['Inter'] text-xs sm:text-sm text-gray-300 leading-relaxed">
+                  <h4 className="font-['Hanken_Grotesk'] font-bold text-lg text-white group-hover/solution:text-amber-200 transition-colors mb-1">Our Solution</h4>
+                  <p className="font-['Inter'] text-xs sm:text-sm text-gray-300 group-hover/solution:text-gray-200 transition-colors leading-relaxed">
                     {flagshipProject.solution}
                   </p>
                 </div>
@@ -105,19 +105,18 @@ const Projects = () => {
             Full-Stack Architecture (Node.js, React, Firebase & GCP)
           </h3>
           <div className="relative flex flex-col md:flex-row items-center justify-between gap-6 p-8 glass-card rounded-3xl border border-white/10 overflow-hidden">
-            <div className="absolute inset-0 opacity-10 bg-gradient-to-r from-[#6750a4] to-transparent pointer-events-none" />
-            
+            <div className="absolute inset-0 opacity-10 bg-gradient-to-r from-amber-500 to-rose-500 pointer-events-none" />
+
             {sahayakFlow.map((node, index) => (
               <React.Fragment key={node.title}>
                 <div className="flex flex-col items-center text-center z-10 w-40">
-                  <div className={`w-16 h-16 rounded-full flex items-center justify-center mb-4 shadow-lg border ${
-                    node.active
-                      ? 'bg-[#6750a4] border-[#cfbcff] text-white shadow-[0_0_20px_rgba(103,80,164,0.5)]'
-                      : 'bg-[#16171d] border-white/20 text-[#cfbcff]'
-                  }`}>
+                  <div className={`w-16 h-16 rounded-full flex items-center justify-center mb-4 transition-all ${node.active
+                    ? 'bg-amber-500/15 border-2 border-amber-400 text-[#fde68a] shadow-[0_0_20px_rgba(245,158,11,0.25)]'
+                    : 'bg-[#16171d] border border-white/10 text-gray-400'
+                    }`}>
                     <span className="material-symbols-outlined text-3xl">{node.icon}</span>
                   </div>
-                  <span className="font-['Geist_Mono'] text-xs font-bold uppercase text-[#e9ddff]">{node.title}</span>
+                  <span className={`font-['Geist_Mono'] text-xs font-bold uppercase ${node.active ? 'text-[#fde68a]' : 'text-gray-300'}`}>{node.title}</span>
                   <span className="font-['Inter'] text-[10px] text-gray-400 mt-0.5">{node.sub}</span>
                 </div>
 
@@ -134,26 +133,28 @@ const Projects = () => {
         {/* Contribution Grid */}
         <div className="grid md:grid-cols-3 gap-6 mb-16">
           <div className="p-8 glass-card rounded-3xl border border-white/10">
-            <h4 className="font-['Hanken_Grotesk'] text-xl font-bold mb-4 text-[#cfbcff]">Key Contributions</h4>
+            <h4 className="font-['Hanken_Grotesk'] text-xl font-bold mb-4 text-[#fde68a]">Key Contributions</h4>
             <ul className="space-y-3 font-['Inter'] text-sm text-gray-300">
               {flagshipProject.contributions.map((c, i) => (
-                <li key={i} className="flex items-start gap-3">
-                  <span className="material-symbols-outlined text-[#cfbcff] text-sm mt-1">circle</span>
-                  <span>{c}</span>
+                <li key={i} className="group flex items-start gap-3.5 cursor-default transition-colors">
+                  <div className="w-6 h-6 rounded-full bg-amber-500/15 border border-amber-500/30 flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:bg-amber-500 group-hover:border-amber-400 group-hover:shadow-[0_0_12px_rgba(245,158,11,0.5)] transition-all duration-300">
+                    <span className="material-symbols-outlined text-[#fde68a] group-hover:text-black text-xs font-bold transition-colors" aria-hidden="true">check</span>
+                  </div>
+                  <span className="text-gray-300 group-hover:text-white transition-colors">{c}</span>
                 </li>
               ))}
             </ul>
           </div>
 
           <div className="p-8 glass-card rounded-3xl border border-white/10">
-            <h4 className="font-['Hanken_Grotesk'] text-xl font-bold mb-4 text-[#cfbcff]">Challenges</h4>
+            <h4 className="font-['Hanken_Grotesk'] text-xl font-bold mb-4 text-[#fde68a]">Challenges</h4>
             <p className="font-['Inter'] text-sm text-gray-300 leading-relaxed">
               {flagshipProject.challenges}
             </p>
           </div>
 
           <div className="p-8 glass-card rounded-3xl border border-white/10">
-            <h4 className="font-['Hanken_Grotesk'] text-xl font-bold mb-4 text-[#cfbcff]">Future Roadmap</h4>
+            <h4 className="font-['Hanken_Grotesk'] text-xl font-bold mb-4 text-[#fde68a]">Future Roadmap</h4>
             <p className="font-['Inter'] text-sm text-gray-300 leading-relaxed">
               {flagshipProject.roadmap}
             </p>
@@ -221,7 +222,7 @@ const Projects = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#09090b]/80 to-transparent" />
                   <div className="absolute bottom-4 left-4">
-                    <span className="font-['Geist_Mono'] text-[10px] px-3 py-1 bg-black/60 backdrop-blur-md rounded-full text-[#cfbcff] uppercase tracking-wider">
+                    <span className="font-['Geist_Mono'] text-[10px] px-3 py-1 bg-black/60 backdrop-blur-md rounded-full text-[#fde68a] uppercase tracking-wider font-medium">
                       {proj.tag}
                     </span>
                   </div>
@@ -251,7 +252,7 @@ const Projects = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={`View ${proj.title} repository on GitHub`}
-                  className="material-symbols-outlined text-[#cfbcff] group-hover:translate-x-2 transition-transform text-2xl"
+                  className="material-symbols-outlined text-[#fde68a] group-hover:text-[#f59e0b] group-hover:translate-x-2 transition-all text-2xl"
                 >
                   arrow_forward
                 </a>
@@ -272,8 +273,8 @@ const Projects = () => {
         transition={{ duration: 0.8, delay: 0.3 }}
       >
         <div className="glass-card rounded-[3rem] p-10 sm:p-16 text-center relative overflow-hidden border border-white/10">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-[#6750a4]/20 blur-[100px] rounded-full pointer-events-none" />
-          <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#63597c]/10 blur-[100px] rounded-full pointer-events-none" />
+          <div className="absolute top-0 right-0 w-64 h-64 bg-amber-500/15 blur-[100px] rounded-full pointer-events-none" />
+          <div className="absolute bottom-0 left-0 w-64 h-64 bg-rose-500/10 blur-[100px] rounded-full pointer-events-none" />
 
           <h2 className="font-['Hanken_Grotesk'] text-3xl sm:text-5xl font-extrabold text-white mb-6">
             Want to see more projects?
