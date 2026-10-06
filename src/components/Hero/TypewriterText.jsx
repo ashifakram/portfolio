@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const FULL_TEXT = "Java Full Stack Developer | Java Backend Developer | Spring Boot | React | REST APIs | Redis | Microservices";
+const FULL_TEXT = "Java Full Stack Developer | Java Backend Developer | Spring Boot | React | REST APIs | Microservices";
 
 
 
